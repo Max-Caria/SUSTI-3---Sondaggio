@@ -896,21 +896,13 @@
                 const utilita = document.querySelector('input[name="utilita_percepita"]:checked');
 
                 if (!awareness) { showError('Seleziona la frase che descrive il tuo approccio.'); return false; }
-                if (!utilita) { showError('Indica quanto riterresti utile l\'indice Susti.'); return false; }
+                if (!utilita) { showError('Indica quanto riterresti utile lo strumento.'); return false; }
             } else if (currentStep === 3) {
-                const p1 = parseFloat(document.getElementById('p1_too_cheap').value);
-                const p2 = parseFloat(document.getElementById('p2_bargain').value);
-                const p3 = parseFloat(document.getElementById('p3_expensive').value);
-                const p4 = parseFloat(document.getElementById('p4_too_expensive').value);
+                const fasciaPrezzo = document.querySelector('input[name="fascia_prezzo_assessment"]:checked');
+                const supportoTs = document.querySelector('input[name="supporto_consulenza_ts"]:checked');
 
-                if (isNaN(p1) || isNaN(p2) || isNaN(p3) || isNaN(p4) || p1 <= 0 || p2 <= 0 || p3 <= 0 || p4 <= 0) {
-                    showError('Inserisci un valore in euro per tutte le 4 domande.');
-                    return false;
-                }
-                if (p1 >= p4 || p2 >= p4 || p3 >= p4) {
-                    showError('Coerenza prezzi: il valore proibitivo deve essere superiore agli altri tre.');
-                    return false;
-                }
+                if (!fasciaPrezzo) { showError('Seleziona una fascia di spesa ritenuta corretta.'); return false; }
+                if (!supportoTs) { showError('Indica quale tipo di supporto eventuale considereresti utile.'); return false; }
             } else if (currentStep === 4) {
                 const valore = document.querySelector('input[name="valore_attestato"]:checked');
                 const fascia = document.querySelector('input[name="fascia_attestato"]:checked');
@@ -952,10 +944,8 @@
                 clientela: document.querySelector('input[name="clientela"]:checked')?.value || '',
                 awareness: document.querySelector('input[name="awareness"]:checked')?.value || '',
                 utilita_percepita: document.querySelector('input[name="utilita_percepita"]:checked')?.value || '',
-                p1_too_cheap: document.getElementById('p1_too_cheap').value,
-                p2_bargain: document.getElementById('p2_bargain').value,
-                p3_expensive: document.getElementById('p3_expensive').value,
-                p4_too_expensive: document.getElementById('p4_too_expensive').value,
+                fascia_prezzo_assessment: document.querySelector('input[name="fascia_prezzo_assessment"]:checked')?.value || '',
+                supporto_consulenza_ts: document.querySelector('input[name="supporto_consulenza_ts"]:checked')?.value || '',
                 valore_attestato: document.querySelector('input[name="valore_attestato"]:checked')?.value || '',
                 fascia_attestato: document.querySelector('input[name="fascia_attestato"]:checked')?.value || '',
                 modalita_fruizione: document.querySelector('input[name="modalita_fruizione"]:checked')?.value || '',
