@@ -64,7 +64,6 @@
             -moz-appearance: textfield;
         }
 
-        /* Prevenzione auto-zoom indesiderato su iOS Safari per schermi mobile */
         @media screen and (max-width: 640px) {
             input, select, textarea {
                 font-size: 16px !important;
@@ -83,7 +82,6 @@
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
             <div class="flex items-center gap-2.5 sm:gap-4 shrink-0">
-                <!-- Marchio Ufficiale SUSTi nella variante Lime (#94c11f) con claim da Brand Manual -->
                 <a href="#" class="inline-flex items-center group shrink-0" title="Susti — Sustainable Tourism Index">
                     <img 
                         src="assets/logo/susti-lockup-claim-lime.svg" 
@@ -91,7 +89,6 @@
                         class="h-7 sm:h-10 w-auto max-w-[140px] xs:max-w-[170px] sm:max-w-[250px] object-contain select-none"
                         onerror="if(!this.dataset.triedRoot){ this.dataset.triedRoot='1'; this.src='susti-lockup-claim-lime.svg'; } else if(this.dataset.triedRoot==='1'){ this.dataset.triedRoot='2'; this.src='susti-lockup-claim-lime.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
                     />
-                    <!-- Fallback SVG vettoriale istantaneo -->
                     <div class="items-start flex-col hidden select-none">
                         <div class="flex items-baseline tracking-[-0.03em] leading-none">
                             <span class="font-brand font-black text-xl sm:text-3xl text-[#94c11f]">SUST</span>
@@ -103,7 +100,6 @@
                     </div>
                 </a>
 
-                <!-- Dicitura istituzionale affiancata a destra del logo (ottimizzata per mobile) -->
                 <div class="hidden sm:flex items-center pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
                     <span class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">
                         Iniziativa di <strong class="text-slate-600 font-semibold block sm:inline">Territori Sostenibili Società Benefit</strong>
@@ -144,7 +140,6 @@
                     Prima del rilascio ufficiale di questo nuovo strumento, ci sta a cuore ascoltare chi vive l'hotel ogni giorno per renderlo concreto, accessibile e vicino al lavoro reale della struttura.
                 </p>
 
-                <!-- Omaggio card sintetica ed empatica (ottimizzata per mobile) -->
                 <div class="mt-6 sm:mt-7 p-3.5 sm:p-5 rounded-2xl bg-white/10 border border-white/15 max-w-xl mx-auto flex items-start sm:items-center text-left gap-3 shadow-lg backdrop-blur-md">
                     <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#94c11f]/20 border border-[#94c11f]/40 text-[#c6d86b] flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
@@ -171,7 +166,6 @@
             </div>
         </section>
 
-        <!-- 3 Pilastri di posizionamento -->
         <section class="py-12 bg-white border-b border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -211,10 +205,8 @@
         <section class="py-12 bg-[#f3f6f3]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 
-                <!-- Mockup Schermo Computer / Finestra Software Susti -->
                 <div class="bg-white border border-slate-300 rounded-3xl shadow-2xl overflow-hidden">
                     
-                    <!-- Barra del Browser / Finestra Applicativa macOS style -->
                     <div class="bg-slate-800 text-slate-300 px-4 py-3 flex items-center justify-between border-b border-slate-700">
                         <div class="flex items-center space-x-2">
                             <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block"></span>
@@ -234,7 +226,6 @@
                         </div>
                     </div>
 
-                    <!-- Header interno schermata di valutazione -->
                     <div class="p-4 sm:p-7 border-b border-slate-200 bg-white">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                             <div class="max-w-2xl">
@@ -259,10 +250,8 @@
                         </div>
                     </div>
 
-                    <!-- Contenuto della Dashboard del Report -->
                     <div class="p-4 sm:p-7 bg-[#fcfdfc] space-y-5 sm:space-y-6">
                         
-                        <!-- Riquadro Punteggio Globale e Grafico Radar a 10 vertici -->
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center p-3.5 sm:p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
                             
                             <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-4 sm:p-5 bg-[#f3f6f3] rounded-2xl border border-slate-200 w-full">
@@ -298,7 +287,6 @@
                             </div>
                         </div>
 
-                        <!-- 3 Macro-Aree con Barre di Avanzamento -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
                             <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
                                 <div class="flex justify-between font-brand font-bold text-slate-800 mb-1.5">
@@ -334,10 +322,8 @@
                             </div>
                         </div>
 
-                        <!-- Punti di Forza e Azioni Prioritarie -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
                             
-                            <!-- 3 Punti di Forza -->
                             <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-4 shadow-sm space-y-2.5">
                                 <div class="flex items-center gap-1.5 font-bold text-[#00522b] font-brand text-xs">
                                     <svg class="w-4 h-4 text-[#007f3d] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -359,7 +345,6 @@
                                 </ul>
                             </div>
 
-                            <!-- 3 Azioni Prioritarie ad Alto Ritorno -->
                             <div class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 shadow-sm space-y-2.5">
                                 <div class="flex items-center gap-1.5 font-bold text-amber-900 font-brand text-xs">
                                     <svg class="w-4 h-4 text-amber-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
@@ -382,7 +367,6 @@
                             </div>
                         </div>
 
-                        <!-- Card Teaser sui 4 Contenuti Chiave del Report Completo -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 text-center">
                             <div class="text-xs font-bold text-slate-800 font-brand flex items-center justify-center gap-1.5">
                                 <svg class="w-4 h-4 text-[#007f3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -560,10 +544,10 @@
                             </div>
                         </div>
 
-                        <!-- PASSO 3: Valutazione Economica e Integrazione con Consulenza TS -->
+                        <!-- PASSO 3: Valutazione Economica e Strumenti Self-Service (Autonomia) -->
                         <div id="step-3" class="space-y-4 hidden">
                             <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600 leading-relaxed">
-                                <strong class="text-[#00522b]">Come funziona questo strumento:</strong> è una piattaforma <strong>100% digitale e self-service</strong>: compili le 50 domande e il sistema calcola istantaneamente l'indice del tuo hotel rispetto a 1.000+ strutture, restituendo il report PDF con la to-do list prioritaria. I servizi personalizzati e l'accompagnamento alle certificazioni ufficiali sono invece curati direttamente dagli esperti di <strong>Territori Sostenibili</strong>.
+                                <strong class="text-[#00522b]">Come funziona questo strumento:</strong> è una piattaforma <strong>100% digitale e self-service</strong>: compili le 50 domande e il sistema calcola istantaneamente l'indice del tuo hotel rispetto a 1.000+ strutture, restituendo il report PDF con la to-do list prioritaria per operare in autonomia.
                             </div>
 
                             <div>
@@ -596,34 +580,58 @@
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-brand">
-                                    7. Una volta rilevati i punti deboli della struttura tramite questo report, quale supporto da parte degli esperti di Territori Sostenibili considereresti utile?
+                                    7. Una volta individuati i punti deboli dal report, quale strumento digitale standardizzato ti aiuterebbe di più a colmare i gap in piena autonomia con il tuo team?
                                 </label>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="supporto_consulenza_ts" value="nessuno_autonomia" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Nessuno:</strong> ci basta il report digitale per intervenire in piena autonomia.</span>
+                                        <input type="radio" name="upsell_self_service" value="corsi_formazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Corsi di formazione online per il personale:</strong> brevi moduli pratici sui temi chiave (es. riduzione sprechi in cucina, accoglienza sostenibile, green claims).</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="supporto_consulenza_ts" value="call_debriefing_1h" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Video-confronto di 1 ora:</strong> una sessione con un consulente per commentare i dati e definire le priorità.</span>
+                                        <input type="radio" name="upsell_self_service" value="checklist_reparto" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Checklist operative di reparto:</strong> schede d'azione pronte per governante, manutentori e reception.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="supporto_consulenza_ts" value="certificazione_ufficiale" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Affiancamento alla certificazione formale:</strong> percorso sul campo per ottenere lo standard GSTC o ISO 21401.</span>
+                                        <input type="radio" name="upsell_self_service" value="kit_documentale" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Kit documentale preparatorio:</strong> modelli di policy, registri di monitoraggio e procedure pre-compilate conformi agli standard.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="supporto_consulenza_ts" value="supporto_bandi" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Supporto a bandi e finanziamenti:</strong> accesso a contributi per interventi di efficienza e transizione.</span>
+                                        <input type="radio" name="upsell_self_service" value="nessuno_autonomia" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Nessuno strumento aggiuntivo:</strong> ci basta la to-do list del report per organizzarci da soli.</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- PASSO 4 -->
+                        <!-- PASSO 4: Approccio alla Certificazione di Terza Parte e Mercato -->
                         <div id="step-4" class="space-y-4 sm:space-y-5 hidden">
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-brand">
-                                    8. Valore di un attestato con codice di verifica ISO 17033 (esponibile su Booking.com e sito):
+                                    8. In vista di un percorso verso standard e certificazioni ufficiali (GSTC o ISO 21401, rilasciate da organismi terzi accreditati), quale approccio riterresti più efficace per il tuo hotel?
+                                </label>
+                                <div class="space-y-2 text-xs">
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="approccio_certificazione" value="consulente_dedicato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Accompagnamento specialistico con consulente dedicato:</strong> un esperto che affianca la struttura in tutte le fasi (analisi preliminare dei gap, verifica documentale e pre-audit) prima dell'ispezione dell'ente certificatore terzo.</span>
+                                    </label>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="approccio_certificazione" value="autonomia_kit" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Preparazione autonoma guidata da kit e checklist:</strong> gestione interamente interna al team alberghiero attraverso modelli procedurali, registri e linee guida standardizzate.</span>
+                                    </label>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="approccio_certificazione" value="formula_mista" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Formula mista con verifiche periodiche:</strong> gestione operativa interna al personale affiancata da check-point mirati di validazione con un consulente esperto nei passaggi chiave.</span>
+                                    </label>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="approccio_certificazione" value="nessun_interesse" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Nessun interesse per la certificazione formale:</strong> puntiamo esclusivamente all'efficienza interna e alla riduzione dei costi vivi senza percorsi verso marchi terzi.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-200">
+                                <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-brand">
+                                    9. Valore di un attestato con codice di verifica conforme a standard internazionali (esponibile su Booking.com e sito):
                                 </label>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-start sm:items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
@@ -643,7 +651,7 @@
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-brand">
-                                    9. Fascia di canone annuale ritenuta equa per mantenere l'attestato verificabile:
+                                    10. Fascia di canone annuale ritenuta equa per mantenere l'attestato verificabile:
                                 </label>
                                 <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs">
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[40px]">
@@ -664,29 +672,9 @@
                                     </label>
                                 </div>
                             </div>
-
-                            <div class="pt-3 border-t border-slate-200">
-                                <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-brand">
-                                    10. Modalità di utilizzo preferita:
-                                </label>
-                                <div class="space-y-2 text-xs">
-                                    <label class="flex items-start sm:items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="modalita_fruizione" value="solo_digitale" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Solo diagnosi:</strong> report digitale autonomo con to-do list.</span>
-                                    </label>
-                                    <label class="flex items-start sm:items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="modalita_fruizione" value="combinata_attestato" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Combinata:</strong> report completo + attestato annuale con codice QR.</span>
-                                    </label>
-                                    <label class="flex items-start sm:items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="modalita_fruizione" value="guidata_call" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Guidata con esperto:</strong> report + 1 ora di video-consulenza dedicata.</span>
-                                    </label>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- PASSO 5 -->
+                        <!-- PASSO 5: Feedback Aperto e Invio Accesso Assessment -->
                         <div id="step-5" class="space-y-4 hidden">
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-1 font-brand">
@@ -756,7 +744,6 @@
     <footer class="border-t border-slate-200 bg-white py-6 sm:py-8">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-5 sm:space-y-6">
             
-            <!-- Incontriamoci a Rimini -->
             <div class="bg-[#f3f6f3] border border-slate-200 rounded-2xl p-4 sm:p-5">
                 <div class="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#007f3d] mb-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d] animate-pulse"></span>
@@ -789,7 +776,6 @@
                 </div>
             </div>
 
-            <!-- Logo e identità istituzionale Territori Sostenibili Società Benefit -->
             <div class="pt-4 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
                 <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group" title="Territori Sostenibili Società Benefit">
                     <img 
@@ -799,7 +785,6 @@
                         onerror="if(!this.dataset.triedCase){ this.dataset.triedCase='1'; this.src='Territori Sostenibili.png'; } else if(this.dataset.triedCase==='1'){ this.dataset.triedCase='2'; this.src='territori_sostenibili.png'; } else if(this.dataset.triedCase==='2'){ this.dataset.triedCase='3'; this.src='assets/logo/territori-sostenibili.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }" 
                     />
                     <div class="items-center gap-2.5 hidden">
-                        <!-- Fallback SVG logo Territori Sostenibili -->
                         <svg class="h-10 w-auto" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 45 L25 15 L40 38" stroke="#a06334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M22 45 C15 32 28 18 36 28 C37 38 27 46 22 45 Z" fill="#007f3d"/>
@@ -884,8 +869,8 @@
             const stepLabels = [
                 'Passo 1 di 5: Profilo della struttura',
                 'Passo 2 di 5: Approccio attuale',
-                'Passo 3 di 5: Stima di valore e supporto',
-                'Passo 4 di 5: Attestato e modello d\'uso',
+                'Passo 3 di 5: Valutazione economica e autonomia',
+                'Passo 4 di 5: Approccio alla certificazione e mercato',
                 'Passo 5 di 5: Invio accesso assessment'
             ];
             
@@ -914,18 +899,18 @@
                 if (!utilita) { showError('Indica quanto riterresti utile lo strumento.'); return false; }
             } else if (currentStep === 3) {
                 const fasciaPrezzo = document.querySelector('input[name="fascia_prezzo_assessment"]:checked');
-                const supportoTs = document.querySelector('input[name="supporto_consulenza_ts"]:checked');
+                const upsellSelfService = document.querySelector('input[name="upsell_self_service"]:checked');
 
                 if (!fasciaPrezzo) { showError('Seleziona una fascia di spesa ritenuta corretta.'); return false; }
-                if (!supportoTs) { showError('Indica quale tipo di supporto considereresti utile.'); return false; }
+                if (!upsellSelfService) { showError('Indica quale strumento digitale ti aiuterebbe di più a colmare i gap in autonomia.'); return false; }
             } else if (currentStep === 4) {
+                const approccioCert = document.querySelector('input[name="approccio_certificazione"]:checked');
                 const valore = document.querySelector('input[name="valore_attestato"]:checked');
                 const fascia = document.querySelector('input[name="fascia_attestato"]:checked');
-                const modalita = document.querySelector('input[name="modalita_fruizione"]:checked');
 
+                if (!approccioCert) { showError('Seleziona l\'approccio più adatto per il percorso di certificazione.'); return false; }
                 if (!valore) { showError('Indica il valore dell\'attestato.'); return false; }
-                if (!fascia) { showError('Seleziona una fascia di canone.'); return false; }
-                if (!modalita) { showError('Seleziona la modalità di utilizzo.'); return false; }
+                if (!fascia) { showError('Seleziona una fascia di canone annuale per l\'attestato.'); return false; }
             } else if (currentStep === 5) {
                 const struttura = document.getElementById('nome_struttura').value.trim();
                 const email = document.getElementById('email_lead').value.trim();
@@ -960,10 +945,10 @@
                 awareness: document.querySelector('input[name="awareness"]:checked')?.value || '',
                 utilita_percepita: document.querySelector('input[name="utilita_percepita"]:checked')?.value || '',
                 fascia_prezzo_assessment: document.querySelector('input[name="fascia_prezzo_assessment"]:checked')?.value || '',
-                supporto_consulenza_ts: document.querySelector('input[name="supporto_consulenza_ts"]:checked')?.value || '',
+                upsell_self_service: document.querySelector('input[name="upsell_self_service"]:checked')?.value || '',
+                approccio_certificazione: document.querySelector('input[name="approccio_certificazione"]:checked')?.value || '',
                 valore_attestato: document.querySelector('input[name="valore_attestato"]:checked')?.value || '',
                 fascia_attestato: document.querySelector('input[name="fascia_attestato"]:checked')?.value || '',
-                modalita_fruizione: document.querySelector('input[name="modalita_fruizione"]:checked')?.value || '',
                 principale_ostacolo: document.getElementById('principale_ostacolo').value.trim(),
                 nome_struttura: document.getElementById('nome_struttura').value.trim(),
                 email_lead: document.getElementById('email_lead').value.trim(),
