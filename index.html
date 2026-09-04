@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Michroma&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -63,21 +63,46 @@
         input[type=number] {
             -moz-appearance: textfield;
         }
+
+        .claim-inter-light {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            letter-spacing: -0.01em;
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-[#94c11f] selection:text-[#00522b] min-h-screen flex flex-col justify-between">
 
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="flex flex-col">
-                    <div class="flex items-baseline space-x-2">
-                        <span class="font-brand font-bold text-2xl text-[#00522b] leading-none">SUSTI</span>
-                        <span class="text-xs text-slate-500 font-medium tracking-tight">Sustainable Tourism Index</span>
+                    <!-- Marchio Ufficiale SUSTi nella variante Lime (#94c11f) con claim da Brand Manual -->
+                    <a href="#" class="inline-flex items-center group" title="Susti — Sustainable Tourism Index">
+                        <img 
+                            src="assets/logo/susti-lockup-claim-lime.svg" 
+                            alt="Susti — Sustainable Tourism Index" 
+                            class="h-9 sm:h-11 w-auto max-w-[210px] sm:max-w-[280px] object-contain select-none"
+                            onerror="if(!this.dataset.triedRoot){ this.dataset.triedRoot='1'; this.src='susti-lockup-claim-lime.svg'; } else if(this.dataset.triedRoot==='1'){ this.dataset.triedRoot='2'; this.src='susti-lockup-claim-lime.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
+                        />
+                        <!-- Fallback SVG vettoriale istantaneo (entra in funzione se il file esterno non è presente nella cartella locale) -->
+                        <div class="items-start flex-col hidden select-none">
+                            <div class="flex items-baseline tracking-[-0.03em] leading-none">
+                                <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">SUST</span>
+                                <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">i</span>
+                            </div>
+                            <span class="claim-inter-light text-[9px] sm:text-[11px] text-slate-500 font-light tracking-tight mt-0.5">
+                                Sustainable Tourism Index
+                            </span>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-1.5 mt-1">
+                        <span class="w-3.5 h-[2px] bg-[#94c11f] inline-block"></span>
+                        <span class="text-[10px] text-slate-400">
+                            Iniziativa di <strong class="text-slate-600">Territori Sostenibili Società Benefit</strong>
+                        </span>
                     </div>
-                    <span class="text-[10px] text-slate-400 mt-0.5">
-                        Iniziativa di <strong>Territori Sostenibili Società Benefit</strong>
-                    </span>
                 </div>
             </div>
             
@@ -745,6 +770,48 @@
                 </div>
             </div>
 
+            <!-- Logo e identità istituzionale Territori Sostenibili Società Benefit -->
+            <div class="pt-4 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
+                <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group" title="Territori Sostenibili Società Benefit">
+                    <!-- Immagine con supporto automatico ai vari nomi file (case-insensitive su Vercel/Linux) e fallback SVG -->
+                    <img 
+                        src="./territori-sostenibili.png" 
+                        alt="Territori Sostenibili Società Benefit" 
+                        class="h-10 w-auto object-contain" 
+                        onerror="if(!this.dataset.triedCase){ this.dataset.triedCase='1'; this.src='Territori Sostenibili.png'; } else if(this.dataset.triedCase==='1'){ this.dataset.triedCase='2'; this.src='territori_sostenibili.png'; } else if(this.dataset.triedCase==='2'){ this.dataset.triedCase='3'; this.src='assets/logo/territori-sostenibili.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }" 
+                    />
+                    <div class="items-center gap-2.5 hidden">
+                        <!-- Icona logo Territori Sostenibili (Foglie, Monte e Onda) -->
+                        <svg class="h-10 w-auto" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Profilo montano marrone -->
+                            <path d="M5 45 L25 15 L40 38" stroke="#a06334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Foglia verde scuro sinistra -->
+                            <path d="M22 45 C15 32 28 18 36 28 C37 38 27 46 22 45 Z" fill="#007f3d"/>
+                            <path d="M23 44 C28 36 32 30 35 29" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <!-- Foglia verde chiara centrale/alta -->
+                            <path d="M36 32 C32 18 45 6 52 16 C53 26 43 34 36 32 Z" fill="#94c11f"/>
+                            <path d="M37 31 C42 24 47 18 51 17" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <!-- Foglia verde media destra -->
+                            <path d="M42 42 C42 30 58 26 62 36 C60 45 48 48 42 42 Z" fill="#69a82f"/>
+                            <path d="M43 41 C50 38 56 34 61 36" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <!-- Onda azzurra inferiore -->
+                            <path d="M12 56 C28 50 48 54 65 52 C52 57 32 58 12 56 Z" fill="#1a8ad4"/>
+                            <path d="M18 60 C32 56 50 58 68 56" stroke="#37aae1" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex flex-col text-left">
+                            <span class="font-extrabold text-[#007f3d] text-base leading-none tracking-tight">territori</span>
+                            <span class="font-extrabold text-[#1a8ad4] text-base leading-none tracking-tight">sostenibili</span>
+                            <span class="text-[9.5px] font-medium text-slate-700 tracking-wider uppercase mt-0.5">Società Benefit</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="text-center md:text-right text-xs text-slate-500">
+                    <div>Standard di riferimento: <strong class="text-slate-700">GSTC Industry</strong> · <strong class="text-slate-700">ISO 21401</strong> · <strong class="text-slate-700">ISO 17033</strong></div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Metodologia di misurazione e benchmarking per l'ospitalità responsabile</div>
+                </div>
+            </div>
+
             <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 pt-2">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                     <span>I tuoi dati restano riservati</span>
@@ -754,7 +821,7 @@
                     <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="hover:text-[#007f3d] underline">Privacy Policy</a>
                 </div>
                 <div class="text-[11px] text-slate-400">
-                    Standard GSTC Industry · ISO 21401 · ISO 17033
+                    Piattaforma Susti · Sustainable Tourism Index
                 </div>
             </div>
             
