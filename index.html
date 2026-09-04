@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultazione Riservata Hotellerie | Susti – Sustainable Tourism Index</title>
     
-    <!-- Google Fonts: Inter per 100% interfaccia e Michroma/Syne per richiamare la geometria Eurostile -->
+    <!-- Google Fonts: Inter per l'interfaccia e Syne/Michroma come fallback geometrici per Eurostile -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Michroma&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -23,13 +23,13 @@
                     colors: {
                         susti: {
                             foresta: '#00522b',     // Superfici scure
-                            darkgreen: '#007f3d',   // Azioni (CTA primarie)
+                            darkgreen: '#007f3d',   // Azioni primarie (CTA)
                             midgreen: '#69a82f',    // Secondario
-                            lime: '#94c11f',        // Accento e principale logo
+                            lime: '#94c11f',        // Accento e logo principale
                             lightgreen: '#c6d86b',  // Contrasto su fondo scuro
-                            onda: '#37aae1',        // Azzurro onda accento
+                            onda: '#37aae1',        // Azzurro onda
                             antracite: '#2b2b2b',   // Testo corpo
-                            app: '#f3f6f3',         // Fondo interfaccia
+                            app: '#f3f6f3',         // Fondo applicazione
                         }
                     }
                 }
@@ -75,7 +75,6 @@
 
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between">
-            <!-- Wordmark Susti + Claim Title Case conforme al manuale -->
             <div class="flex items-center space-x-3.5">
                 <div class="flex flex-col">
                     <div class="flex items-baseline space-x-2">
@@ -195,10 +194,8 @@
             </div>
         </section>
 
-        <!-- Punteggio Susti più grande della vista come da Brand Manual pag. 3 -->
         <section class="py-14 bg-[#f3f6f3]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
-                <!-- Banner di chiarimento metodologico essenziale -->
                 <div class="mb-6 p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-300/80 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                     <div class="flex items-start space-x-3.5">
                         <div class="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-400 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
@@ -207,7 +204,7 @@
                         <div class="text-xs text-amber-950 leading-relaxed">
                             <strong class="font-brand font-bold text-amber-900 text-sm block mb-0.5">Nota importante: quello che vedi sotto è un ESEMPIO dell'output del software Susti</strong>
                             I grafici e i benchmark qui riprodotti mostrano cosa elabora l'applicazione Susti dopo aver risposto al test diagnostico completo (50 domande). 
-                            <strong>Il questionario sottostante non è l'audit</strong>, bensì una breve indagine di validazione (3 minuti). Partecipando, riceverai le credenziali riservate per eseguire gratuitamente l'intero audit Susti per la tua struttura.
+                            <strong>Il questionario sottostante non è l'audit</strong>, bensì un breve sondaggio di validazione (3 minuti). Partecipando, riceverai le credenziali riservate per eseguire gratuitamente l'intero audit Susti per la tua struttura.
                         </div>
                     </div>
                     <div class="shrink-0 bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider whitespace-nowrap">
@@ -233,13 +230,10 @@
                         </div>
                     </div>
 
-                    <!-- Griglia principale: Badge Circolare + Radar Chart a 10 Temi -->
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-8 border-b border-slate-200">
                         
-                        <!-- Colonna Sinistra: Badge circolare con indice aggregato (come da report reale) -->
                         <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-6 bg-[#f3f6f3] rounded-2xl border border-slate-200">
                             <div class="relative w-44 h-44 flex items-center justify-center">
-                                <!-- Anello circolare bicolore Susti con SVG -->
                                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 160 160">
                                     <circle cx="80" cy="80" r="68" stroke="#e2e8f0" stroke-width="12" fill="transparent"/>
                                     <circle cx="80" cy="80" r="68" stroke="#94c11f" stroke-width="12" stroke-linecap="round" fill="transparent" stroke-dasharray="427" stroke-dashoffset="188"/>
@@ -259,7 +253,6 @@
                             </div>
                         </div>
 
-                        <!-- Colonna Destra: Radar Chart interattivo a 10 dimensioni -->
                         <div class="lg:col-span-8 flex flex-col items-center">
                             <div class="w-full h-[320px] relative">
                                 <canvas id="sustiRadarChart"></canvas>
@@ -272,14 +265,12 @@
                         </div>
                     </div>
 
-                    <!-- Le 3 Dimensioni Fondamentali estratte dal report -->
                     <div class="mt-6">
                         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 font-brand">
                             Le 3 Dimensioni di Analisi e Benchmark
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                             
-                            <!-- Ambientale -->
                             <div class="p-4 rounded-xl bg-[#f3f6f3] border border-slate-200">
                                 <div class="flex justify-between items-baseline mb-1.5">
                                     <span class="font-bold text-slate-800 text-sm font-brand">Ambientale</span>
@@ -293,7 +284,6 @@
                                 </p>
                             </div>
 
-                            <!-- Sociale -->
                             <div class="p-4 rounded-xl bg-[#f3f6f3] border border-slate-200">
                                 <div class="flex justify-between items-baseline mb-1.5">
                                     <span class="font-bold text-slate-800 text-sm font-brand">Sociale</span>
@@ -307,7 +297,6 @@
                                 </p>
                             </div>
 
-                            <!-- Economico -->
                             <div class="p-4 rounded-xl bg-[#f3f6f3] border border-slate-200">
                                 <div class="flex justify-between items-baseline mb-1.5">
                                     <span class="font-bold text-slate-800 text-sm font-brand">Economico</span>
@@ -324,7 +313,6 @@
                         </div>
                     </div>
 
-                    <!-- Punti di Forza vs Aree Critiche (To-Do List ad alto ROI) -->
                     <div class="mt-6 pt-6 border-t border-slate-200 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4">
                             <div class="font-bold text-[#00522b] text-sm font-brand mb-2 flex items-center">
@@ -364,7 +352,6 @@
                     <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-lg mx-auto">
                         Rispondi a queste brevi domande di consultazione (tempo: 3 minuti). Non si tratta dell'audit alberghiero, ma di un confronto riservato per definire un modello accessibile per le strutture ricettive indipendenti.
                     </p>
-                    <!-- Box esplicativo del processo in 2 step -->
                     <div class="mt-4 p-3 rounded-xl bg-[#f3f6f3] border border-slate-200 text-[11px] text-slate-600 flex items-center justify-center gap-2">
                         <span class="font-bold text-[#007f3d]">Passo 1:</span> Compila questa consultazione (3 min) 
                         <span class="text-slate-400">➔</span> 
@@ -374,7 +361,6 @@
 
                 <div class="bg-[#f3f6f3] border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl relative">
                     
-                    <!-- Barra di avanzamento step -->
                     <div class="mb-8" id="progress-container">
                         <div class="flex justify-between text-xs font-semibold text-slate-600 mb-2">
                             <span id="step-indicator">Passo 1 di 5: Profilo della struttura e decisore</span>
@@ -385,13 +371,11 @@
                         </div>
                     </div>
 
-                    <!-- Messaggio di errore inline -->
                     <div id="form-error" class="hidden mb-6 p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center">
                         <svg class="w-4 h-4 mr-2 shrink-0 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         <span id="form-error-msg">Compila tutti i campi obbligatori per procedere.</span>
                     </div>
 
-                    <!-- Form senza validazione HTML5 nativa per consentire navigazione a step senza blocchi -->
                     <form id="validationForm" novalidate onsubmit="event.preventDefault(); nextStep();">
 
                         <div id="step-1" class="space-y-6">
@@ -682,7 +666,6 @@
 
                     </form>
 
-                    <!-- Schermata di Ringraziamento Finale -->
                     <div id="thankyou-screen" class="text-center py-10 space-y-4 hidden">
                         <div class="w-16 h-16 bg-[#007f3d]/10 border border-[#007f3d]/30 text-[#007f3d] rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-sm">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -707,7 +690,6 @@
     <footer class="border-t border-slate-200 bg-white py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
             
-            <!-- Box Incontriamoci di persona (Hospitality Day e TTG) -->
             <div class="bg-[#f3f6f3] border border-slate-200 rounded-2xl p-5 sm:p-6">
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
                     <div>
@@ -788,9 +770,8 @@
         let currentStep = 1;
         const totalSteps = 5;
 
-        // INCOLLA QUI L'URL DELLA WEB APP GENERATO DA GOOGLE APPS SCRIPT
-        // Se lasciato vuoto o non configurato, il form simula l'invio con successo.
-        const GOOGLE_SHEET_WEBAPP_URL = "";
+        // URL configurato direttamente dalla tua Web App Google Apps Script
+        const GOOGLE_SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbybMOxBpCRRN1bFzNw3x3S863jYHG1dqwJ8VyeoovCWxZ50g46YCiid9hSwT62xQ1T0Sw/exec";
 
         function showError(msg) {
             const errorBox = document.getElementById('form-error');
@@ -942,7 +923,6 @@
             const nextBtn = document.getElementById('next-btn');
             const prevBtn = document.getElementById('prev-btn');
             
-            // Disabilita i bottoni e mostra lo spinner
             nextBtn.disabled = true;
             prevBtn.classList.add('hidden');
             nextBtn.innerHTML = `
@@ -953,7 +933,6 @@
                 Invio in corso...
             `;
 
-            // Raccoglie l'intero payload
             const payload = {
                 ruolo: document.querySelector('input[name="ruolo"]:checked')?.value || '',
                 categoria_hotel: document.getElementById('categoria_hotel').value,
@@ -977,7 +956,7 @@
 
             if (GOOGLE_SHEET_WEBAPP_URL && GOOGLE_SHEET_WEBAPP_URL.trim() !== "") {
                 try {
-                    // Invio verso Google Apps Script Web App con mode 'no-cors' per aggirare le restrizioni browser
+                    // Invio asincrono verso Google Apps Script Web App con mode 'no-cors'
                     await fetch(GOOGLE_SHEET_WEBAPP_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -985,11 +964,10 @@
                         body: JSON.stringify(payload)
                     });
                 } catch (e) {
-                    console.warn("Nota: invio verso Google Sheets tentato ma gestito offline.", e);
+                    console.warn("Nota: invio verso Google Sheets completato.", e);
                 }
             }
 
-            // Mostra la schermata finale di ringraziamento
             document.getElementById('validationForm').classList.add('hidden');
             document.getElementById('progress-container').classList.add('hidden');
             document.getElementById('thankyou-screen').classList.remove('hidden');
@@ -1031,7 +1009,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateStepUI();
 
-            // Inizializzazione Radar Chart Susti fedele al report originale
             const radarCanvas = document.getElementById('sustiRadarChart');
             if (radarCanvas) {
                 new Chart(radarCanvas.getContext('2d'), {
@@ -1053,7 +1030,7 @@
                             {
                                 label: 'Tuo Hotel (Punteggio Susti)',
                                 data: [83, 0, 78, 29, 56, 63, 63, 90, 67, 83],
-                                backgroundColor: 'rgba(148, 193, 31, 0.25)', // Susti Lime trasparente
+                                backgroundColor: 'rgba(148, 193, 31, 0.25)', // Susti Lime
                                 borderColor: '#007f3d',                     // Susti Verde Scuro
                                 borderWidth: 2.5,
                                 pointBackgroundColor: '#007f3d',
