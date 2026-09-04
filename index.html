@@ -75,42 +75,41 @@
 
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="flex flex-col">
-                    <!-- Marchio Ufficiale SUSTi nella variante Lime (#94c11f) con claim da Brand Manual -->
-                    <a href="#" class="inline-flex items-center group" title="Susti — Sustainable Tourism Index">
-                        <img 
-                            src="assets/logo/susti-lockup-claim-lime.svg" 
-                            alt="Susti — Sustainable Tourism Index" 
-                            class="h-9 sm:h-11 w-auto max-w-[210px] sm:max-w-[280px] object-contain select-none"
-                            onerror="if(!this.dataset.triedRoot){ this.dataset.triedRoot='1'; this.src='susti-lockup-claim-lime.svg'; } else if(this.dataset.triedRoot==='1'){ this.dataset.triedRoot='2'; this.src='susti-lockup-claim-lime.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
-                        />
-                        <!-- Fallback SVG vettoriale istantaneo (entra in funzione se il file esterno non è presente nella cartella locale) -->
-                        <div class="items-start flex-col hidden select-none">
-                            <div class="flex items-baseline tracking-[-0.03em] leading-none">
-                                <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">SUST</span>
-                                <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">i</span>
-                            </div>
-                            <span class="claim-inter-light text-[9px] sm:text-[11px] text-slate-500 font-light tracking-tight mt-0.5">
-                                Sustainable Tourism Index
-                            </span>
+            <div class="flex items-center gap-3 sm:gap-4">
+                <!-- Marchio Ufficiale SUSTi nella variante Lime (#94c11f) con claim da Brand Manual -->
+                <a href="#" class="inline-flex items-center group shrink-0" title="Susti — Sustainable Tourism Index">
+                    <img 
+                        src="assets/logo/susti-lockup-claim-lime.svg" 
+                        alt="Susti — Sustainable Tourism Index" 
+                        class="h-8 sm:h-10 w-auto max-w-[180px] sm:max-w-[250px] object-contain select-none"
+                        onerror="if(!this.dataset.triedRoot){ this.dataset.triedRoot='1'; this.src='susti-lockup-claim-lime.svg'; } else if(this.dataset.triedRoot==='1'){ this.dataset.triedRoot='2'; this.src='susti-lockup-claim-lime.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
+                    />
+                    <!-- Fallback SVG vettoriale istantaneo (entra in funzione se il file esterno non è presente nella cartella locale) -->
+                    <div class="items-start flex-col hidden select-none">
+                        <div class="flex items-baseline tracking-[-0.03em] leading-none">
+                            <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">SUST</span>
+                            <span class="font-brand font-black text-2xl sm:text-3xl text-[#94c11f]">i</span>
                         </div>
-                    </a>
-
-                    <div class="flex items-center gap-1.5 mt-1">
-                        <span class="w-3.5 h-[2px] bg-[#94c11f] inline-block"></span>
-                        <span class="text-[10px] text-slate-400">
-                            Iniziativa di <strong class="text-slate-600">Territori Sostenibili Società Benefit</strong>
+                        <span class="claim-inter-light text-[9px] sm:text-[11px] text-slate-500 font-light tracking-tight mt-0.5">
+                            Sustainable Tourism Index
                         </span>
                     </div>
+                </a>
+
+                <!-- Dicitura istituzionale affiancata a destra del logo -->
+                <div class="flex items-center gap-2 pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
+                    <span class="w-3 h-[2px] bg-[#94c11f] inline-block shrink-0"></span>
+                    <span class="text-[10px] sm:text-[11px] text-slate-400 leading-tight">
+                        Iniziativa di <strong class="text-slate-600 font-semibold block sm:inline">Territori Sostenibili Società Benefit</strong>
+                    </span>
                 </div>
             </div>
             
-            <div class="flex items-center gap-3">
-                <span class="hidden sm:inline-block text-[11px] text-slate-500 font-medium">
+            <div class="flex items-center gap-3 shrink-0">
+                <span class="hidden md:inline-block text-[11px] text-slate-500 font-medium">
                     Indagine Riservata Decisori
                 </span>
-                <a href="#consultazione-form" class="text-xs font-semibold px-4 py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm">
+                <a href="#consultazione-form" class="text-xs font-semibold px-3 sm:px-4 py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap">
                     Partecipa al sondaggio (3 min)
                 </a>
             </div>
