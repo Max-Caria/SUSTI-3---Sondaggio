@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <title>Indagine Sostenibilità Alberghiera 2026 | Susti – Sustainable Tourism Index</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +51,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Eurostile / font-brand riservato unicamente ai titoli macro e loghi, non applicato globalmente */
+        /* Eurostile / font-brand riservato unicamente ai titoli macro e loghi */
         .font-brand {
             font-family: 'Eurostile', 'Eurostile LT Pro', 'Michroma', 'Syne', sans-serif;
             letter-spacing: -0.02em;
@@ -85,20 +86,11 @@
             <div class="flex items-center gap-2.5 sm:gap-4 shrink-0">
                 <a href="#" class="inline-flex items-center group shrink-0" title="Susti — Sustainable Tourism Index">
                     <img 
-                        src="assets/logo/susti-lockup-claim-lime.svg" 
+                        src="susti-lockup-claim-lime.svg" 
                         alt="Susti — Sustainable Tourism Index" 
-                        class="h-7 sm:h-10 w-auto max-w-[140px] xs:max-w-[170px] sm:max-w-[250px] object-contain select-none"
-                        onerror="if(!this.dataset.triedRoot){ this.dataset.triedRoot='1'; this.src='susti-lockup-claim-lime.svg'; } else if(this.dataset.triedRoot==='1'){ this.dataset.triedRoot='2'; this.src='susti-lockup-claim-lime.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }"
+                        class="h-7 sm:h-9 w-auto max-w-[170px] sm:max-w-[220px] object-contain select-none" 
+                        onerror="if(!this.dataset.tried){ this.dataset.tried='1'; this.src='./susti-lockup-claim-lime.svg'; } else if(this.dataset.tried==='1'){ this.dataset.tried='2'; this.src='assets/susti-lockup-claim-lime.svg'; }" 
                     />
-                    <div class="items-start flex-col hidden select-none">
-                        <div class="flex items-baseline tracking-[-0.03em] leading-none">
-                            <span class="font-brand font-black text-xl sm:text-3xl text-[#94c11f]">SUST</span>
-                            <span class="font-brand font-black text-xl sm:text-3xl text-[#94c11f]">i</span>
-                        </div>
-                        <span class="claim-inter-light text-[8px] sm:text-[11px] text-slate-500 font-light tracking-tight mt-0.5">
-                            Sustainable Tourism Index
-                        </span>
-                    </div>
                 </a>
 
                 <div class="hidden sm:flex items-center pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
@@ -121,7 +113,7 @@
     </header>
 
     <main>
-        <!-- Hero Section Snellita ed Efficace -->
+        <!-- Sezione Iniziale Chiara e Funzionale -->
         <section class="relative bg-[#00522b] text-white pt-7 pb-10 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 overflow-hidden border-b border-emerald-900">
             <div class="absolute inset-0 -z-10 opacity-15">
                 <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#94c11f] blur-[140px] rounded-full"></div>
@@ -138,16 +130,16 @@
                 </h1>
 
                 <p class="mt-2.5 sm:mt-3.5 text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto">
-                    Ti chiediamo un parere su uno strumento digitale innovativo pensato per passare dalle parole alla gestione reale: monitorare consumi e costi operativi, rispondere ai requisiti delle OTA e preparare la struttura a certificazioni riconosciute a livello internazionale (GSTC e ISO 21401).
+                    Ti chiediamo un parere su uno strumento digitale innovativo pensato per passare dalle parole alla gestione reale: monitorare consumi e costi operativi, rispondere alle richieste dei portali di prenotazione e preparare la struttura a certificazioni internazionali riconosciute (GSTC e ISO 21401).
                 </p>
 
-                <!-- Box sintetico e compatto sul riconoscimento del tempo -->
+                <!-- Box compatto sul riconoscimento del contributo -->
                 <div class="mt-4 sm:mt-5 p-2.5 sm:p-3 rounded-xl bg-white/10 border border-white/15 max-w-lg mx-auto flex items-center text-left gap-2.5 sm:gap-3 backdrop-blur-md">
                     <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#94c11f]/20 border border-[#94c11f]/40 text-[#c6d86b] flex items-center justify-center shrink-0">
                         <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <div class="text-[11px] sm:text-xs text-slate-100 leading-snug">
-                        <strong>Consultazione entro il 20 Settembre (3 min):</strong> per ringraziarti del tuo tempo e dell'esperienza sul campo, riserveremo alla tua struttura l'<strong>accesso prioritario ed esclusivo</strong> alla nuova piattaforma.
+                        <strong>Consultazione entro il 20 Settembre (3 min):</strong> per ringraziarti della disponibilità e dell'esperienza sul campo, riserveremo alla tua struttura l'<strong>accesso prioritario ed esclusivo</strong> alla nuova piattaforma.
                     </div>
                 </div>
 
@@ -165,6 +157,7 @@
             </div>
         </section>
 
+        <!-- 3 Punti Chiave -->
         <section class="py-10 bg-white border-b border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -174,7 +167,7 @@
                         </div>
                         <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Allineato a GSTC & ISO 21401</h3>
                         <p class="text-xs text-slate-600 leading-relaxed font-sans">
-                            Mappa 50 parametri ufficiali di sostenibilità: prepara la struttura alla certificazione formale e azzera il rischio di contestazioni o greenwashing.
+                            Mappa 50 parametri ufficiali di sostenibilità: prepara la struttura alla certificazione formale ed evita dichiarazioni ambientali fuorvianti.
                         </p>
                     </div>
 
@@ -182,9 +175,9 @@
                         <div class="w-8 h-8 rounded-lg bg-[#69a82f]/15 text-[#007f3d] flex items-center justify-center mb-3 font-black text-sm font-sans font-bold">
                             02
                         </div>
-                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Benchmark su 1.000+ Hotel</h3>
+                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Confronto con oltre 1.000 Hotel</h3>
                         <p class="text-xs text-slate-600 leading-relaxed font-sans">
-                            Confronta subito le prestazioni di sostenibilità della tua struttura con la media reale degli alberghi italiani a 3★, 4★ e 5★ già valutati.
+                            Verifica subito le prestazioni di sostenibilità della tua struttura rispetto alla media reale degli alberghi italiani a 3★, 4★ e 5★ già valutati.
                         </p>
                     </div>
 
@@ -192,15 +185,16 @@
                         <div class="w-8 h-8 rounded-lg bg-[#37aae1]/15 text-[#37aae1] flex items-center justify-center mb-3 font-black text-sm font-sans font-bold">
                             03
                         </div>
-                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Priorità a Ospiti Esteri & OTA</h3>
+                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Portali di Prenotazione e Clienti Esteri</h3>
                         <p class="text-xs text-slate-600 leading-relaxed font-sans">
-                            Rispondi ai requisiti che portali come Booking.com e i viaggiatori DACH o nordeuropei richiedono per riconoscere tariffe più alte (ADR).
+                            Rispondi ai requisiti che Booking.com e i viaggiatori nordeuropei richiedono per riconoscere tariffe e prezzi medi camera più elevati.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Anteprima del Software -->
         <section class="py-12 bg-[#f3f6f3]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 
@@ -211,16 +205,16 @@
                             <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block"></span>
                             <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block"></span>
-                            <span class="hidden sm:inline-block text-[11px] text-slate-400 font-mono ml-2">app.susti.it/report/demo-assessment-preview</span>
+                            <span class="hidden sm:inline-block text-[11px] text-slate-400 font-mono ml-2">app.susti.it/report/demo-anteprima</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#94c11f] bg-[#00522b] rounded-md border border-[#94c11f]/30">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#94c11f] animate-pulse"></span>
-                                Facsimile Software · Anteprima
+                                Facsimile Piattaforma · Anteprima
                             </span>
                             <span class="text-[11px] text-slate-300 font-medium bg-slate-700/80 px-2.5 py-0.5 rounded border border-slate-600 hidden md:inline-flex items-center gap-1">
                                 <svg class="w-3 h-3 text-[#37aae1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                                PDF Report Ufficiale
+                                Report Operativo PDF
                             </span>
                         </div>
                     </div>
@@ -233,17 +227,17 @@
                                         Oggetto della consultazione
                                     </span>
                                     <span class="text-[9.5px] sm:text-[10px] font-bold text-slate-500 bg-slate-100 border border-slate-200 px-1.5 sm:px-2 py-0.5 rounded">
-                                        Piattaforma software Susti
+                                        Strumento di autovalutazione Susti
                                     </span>
                                 </div>
-                                <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-sans leading-tight">Anteprima del software Susti: analisi e monitoraggio della sostenibilità</h3>
+                                <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-sans leading-tight">Anteprima della diagnosi: analisi e monitoraggio della sostenibilità</h3>
                                 <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                                    Questa schermata illustra l'interfaccia di monitoraggio di Susti su cui ti chiediamo un parere. L'<strong>Assessment Completo</strong> analizza 50 parametri di sostenibilità, restituendo un rating oggettivo ponderato, benchmark su 1.000+ hotel, punteggio delle 3 macro-aree (ambientale, sociale, economica) e azioni di miglioramento calibrate sui dati reali.
+                                    Questa schermata illustra l'interfaccia di monitoraggio su cui ti chiediamo un parere. La <strong>Valutazione Completa</strong> analizza 50 parametri ufficiali, restituendo un indice di rating oggettivo, il confronto con oltre 1.000 hotel, i punteggi per dimensione (ambientale, sociale, economica) e gli interventi operativi prioritari per la struttura.
                                 </p>
                             </div>
                             <div class="text-left sm:text-right shrink-0 w-full sm:w-auto">
                                 <span class="text-[11px] sm:text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200 block text-center">
-                                    10 Temi Chiave · Benchmark 1.000+ Hotel
+                                    10 Temi Chiave · Confronto su 1.000+ Hotel
                                 </span>
                             </div>
                         </div>
@@ -275,13 +269,14 @@
                             </div>
 
                             <div class="lg:col-span-8 flex flex-col items-center w-full">
-                                <div class="w-full h-[250px] sm:h-[280px] relative">
+                                <div class="w-full h-[250px] sm:h-[280px] relative bg-white rounded-xl">
                                     <canvas id="sustiRadarChart"></canvas>
                                 </div>
-                                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 text-[10.5px] sm:text-[11px] text-slate-600 mt-2 font-medium">
-                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#007f3d] mr-1.5"></span>Ambientale</span>
-                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#69a82f] mr-1.5"></span>Sociale</span>
-                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#37aae1] mr-1.5"></span>Economico</span>
+                                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-[10.5px] sm:text-[11px] text-slate-600 mt-2 font-medium">
+                                    <span class="text-slate-400 font-bold uppercase text-[9.5px]">3 Dimensioni:</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#007f3d] mr-1.5"></span>Dimensione Ambientale</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#69a82f] mr-1.5"></span>Dimensione Sociale</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#37aae1] mr-1.5"></span>Dimensione Economica</span>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +284,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
                             <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
                                 <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
-                                    <span>Ambientale</span>
+                                    <span>Dimensione Ambientale</span>
                                     <span class="text-[#007f3d] font-bold">35% (14/40 pt)</span>
                                 </div>
                                 <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
@@ -300,7 +295,7 @@
 
                             <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
                                 <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
-                                    <span>Sociale</span>
+                                    <span>Dimensione Sociale</span>
                                     <span class="text-[#69a82f] font-bold">59% (19/32 pt)</span>
                                 </div>
                                 <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
@@ -311,7 +306,7 @@
 
                             <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
                                 <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
-                                    <span>Economico</span>
+                                    <span>Dimensione Economica</span>
                                     <span class="text-[#37aae1] font-bold">82% (23/28 pt)</span>
                                 </div>
                                 <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
@@ -331,15 +326,15 @@
                                 <ul class="space-y-2 text-slate-700 text-[11.5px] leading-relaxed">
                                     <li class="flex items-start">
                                         <span class="text-[#007f3d] font-bold mr-1.5">1.</span>
-                                        <span><strong>Gestione idrica e dei rifiuti già strutturata:</strong> buone pratiche e riduzione degli sprechi già consolidate oltre i minimi normativi.</span>
+                                        <span><strong>Gestione idrica e dei rifiuti consolidata:</strong> buone pratiche e riduzione degli sprechi ben strutturate.</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-[#007f3d] font-bold mr-1.5">2.</span>
-                                        <span><strong>Solida valorizzazione delle risorse locali (90%):</strong> filiera enogastronomica a Km 0 e legame attivo con il territorio.</span>
+                                        <span><strong>Valorizzazione della filiera locale (90%):</strong> enogastronomia a km zero e legame attivo con il territorio.</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-[#007f3d] font-bold mr-1.5">3.</span>
-                                        <span><strong>Comunicazione trasparente della sostenibilità (83%):</strong> messaggi chiari e periodici rivolti all'ospite su sito e materiali.</span>
+                                        <span><strong>Comunicazione trasparente della sostenibilità (83%):</strong> messaggi chiari verso gli ospiti su sito e materiali.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -347,20 +342,20 @@
                             <div class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 shadow-sm space-y-2.5">
                                 <div class="flex items-center gap-1.5 font-bold text-amber-900 font-sans text-xs">
                                     <svg class="w-4 h-4 text-amber-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                    <span>Azioni prioritarie a rientro rapido - ROI (3)</span>
+                                    <span>Azioni a rientro economico rapido (3)</span>
                                 </div>
                                 <ul class="space-y-2 text-slate-700 text-[11.5px] leading-relaxed">
                                     <li class="flex items-start">
                                         <span class="text-amber-800 font-bold mr-1.5">1.</span>
-                                        <span><strong>Attivare il monitoraggio e raccolta dati energetici:</strong> è la causa principale dello scarto; riduce subito i costi vivi delle bollette.</span>
+                                        <span><strong>Monitorare e raccogliere i dati energetici:</strong> è la causa principale dello scarto; riduce subito i costi vivi in bolletta.</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-amber-800 font-bold mr-1.5">2.</span>
-                                        <span><strong>Incentivare la mobilità sostenibile verso gli ospiti:</strong> predisporre informazioni su collegamenti pubblici e convenzioni bike-sharing.</span>
+                                        <span><strong>Favorire la mobilità dolce per gli ospiti:</strong> convenzioni per noleggio bici e informazioni sui mezzi pubblici.</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-amber-800 font-bold mr-1.5">3.</span>
-                                        <span><strong>Rafforzare la formazione e il welfare del team:</strong> strutturare un piano annuale di aggiornamento per il personale di reparto.</span>
+                                        <span><strong>Pianificare l'aggiornamento e la formazione del team:</strong> brevi percorsi pratici per il personale di reparto.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -369,28 +364,28 @@
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 text-center">
                             <div class="text-xs font-bold text-slate-800 font-sans flex items-center justify-center gap-1.5">
                                 <svg class="w-4 h-4 text-[#007f3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                <span>Cosa include l'Assessment Completo per la tua struttura:</span>
+                                <span>Cosa include l'autovalutazione completa per la tua struttura:</span>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 mt-3 text-left">
                                 <div class="bg-[#f3f6f3] p-3 rounded-xl border border-slate-200">
-                                    <div class="text-[11px] font-bold text-[#00522b]">1. Rating & Benchmark Totale</div>
-                                    <p class="text-[10px] text-slate-600 mt-0.5">Rating oggettivo confrontato con 1.000+ alberghi italiani.</p>
+                                    <div class="text-[11px] font-bold text-[#00522b]">1. Rating & Confronto Totale</div>
+                                    <p class="text-[10px] text-slate-600 mt-0.5">Indice oggettivo confrontato con oltre 1.000 alberghi italiani.</p>
                                 </div>
                                 <div class="bg-[#f3f6f3] p-3 rounded-xl border border-slate-200">
-                                    <div class="text-[11px] font-bold text-[#00522b]">2. Le 3 Macro-Dimensioni</div>
-                                    <p class="text-[10px] text-slate-600 mt-0.5">Spaccato analitico su pilastro Ambientale, Sociale ed Economico.</p>
+                                    <div class="text-[11px] font-bold text-[#00522b]">2. Le 3 Dimensioni</div>
+                                    <p class="text-[10px] text-slate-600 mt-0.5">Analisi puntuale per dimensione Ambientale, Sociale ed Economica.</p>
                                 </div>
                                 <div class="bg-[#f3f6f3] p-3 rounded-xl border border-slate-200">
-                                    <div class="text-[11px] font-bold text-[#00522b]">3. Benchmark sui 10 Temi</div>
-                                    <p class="text-[10px] text-slate-600 mt-0.5">Confronto tematico puntuale rispetto alla media delle strutture.</p>
+                                    <div class="text-[11px] font-bold text-[#00522b]">3. Confronto sui 10 Temi</div>
+                                    <p class="text-[10px] text-slate-600 mt-0.5">Punteggio specifico per ogni ambito rispetto alla media nazionale.</p>
                                 </div>
                                 <div class="bg-[#f3f6f3] p-3 rounded-xl border border-slate-200">
-                                    <div class="text-[11px] font-bold text-[#00522b]">4. Azioni Personalizzate (ROI)</div>
-                                    <p class="text-[10px] text-slate-600 mt-0.5">Piano operativo prioritario generato sui gap specifici del tuo hotel.</p>
+                                    <div class="text-[11px] font-bold text-[#00522b]">4. Piano Operativo Mirato</div>
+                                    <p class="text-[10px] text-slate-600 mt-0.5">Elenco di interventi prioritari calibrato sulle carenze rilevate.</p>
                                 </div>
                             </div>
                             <p class="text-[11px] text-[#00522b] font-semibold mt-3">
-                                Riservato in anteprima ed esclusiva per le strutture che parteciperanno alla consultazione entro il 20 settembre 2026.
+                                Riservato in anteprima ed esclusiva per le strutture che partecipano alla consultazione entro il 20 settembre 2026.
                             </p>
                         </div>
 
@@ -399,6 +394,7 @@
             </div>
         </section>
 
+        <!-- SEZIONE FORM DI CONSULTAZIONE -->
         <section id="consultazione-form" class="py-10 sm:py-14 bg-white border-t border-slate-200">
             <div class="max-w-2xl mx-auto px-3.5 sm:px-6">
                 
@@ -406,7 +402,7 @@
                     <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Consultazione Riservata (3 minuti)</span>
                     <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1 font-brand">La sostenibilità nella tua struttura: il tuo punto di vista</h2>
                     <p class="text-xs text-slate-500 mt-1 max-w-md mx-auto leading-relaxed">
-                        Le tue risposte ci aiutano a calibrare questo strumento di rating e monitoraggio sulle reali esigenze operative degli hotel indipendenti. Al termine riserveremo alla tua struttura l'accesso prioritario ed esclusivo alla nuova piattaforma.
+                        Le tue risposte ci aiutano a calibrare questo strumento sulle reali esigenze operative degli hotel indipendenti. Al termine riserveremo alla tua struttura l'accesso prioritario ed esclusivo alla nuova piattaforma.
                     </p>
                 </div>
 
@@ -478,49 +474,49 @@
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[42px]">
                                         <input type="radio" name="clientela" value="leisure_estero" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2 text-[#2b2b2b]">Leisure estero</span>
+                                        <span class="ml-2 text-[#2b2b2b]">Vacanza estero</span>
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[42px]">
                                         <input type="radio" name="clientela" value="leisure_italia" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2 text-[#2b2b2b]">Leisure Italia</span>
+                                        <span class="ml-2 text-[#2b2b2b]">Vacanza Italia</span>
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[42px]">
                                         <input type="radio" name="clientela" value="business_corporate" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2 text-[#2b2b2b]">Business / MICE</span>
+                                        <span class="ml-2 text-[#2b2b2b]">Aziendale / Eventi</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
                         <!-- PASSO 2 -->
-                        <div id="step-2" class="space-y-5 hidden">
+                        <div id="step-2" class="space-y-4 hidden">
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
                                     4. Quale frase descrive meglio l'approccio attuale del tuo hotel alla sostenibilità?
                                 </label>
                                 <div class="space-y-2 text-xs">
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_costi" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5">
-                                        <span class="ml-2.5 text-slate-700"><strong>Raccolta dati e monitoraggio consumi:</strong> ci concentriamo su controllo di gestione, spese vive e ottimizzazione energetica/idrica, senza seguire percorsi o certificazioni ambientali formali.</span>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="awareness" value="coorte_costi" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Monitoraggio consumi e costi vivi:</strong> ci concentriamo su bollette e controllo di gestione, senza certificazioni formali.</span>
                                     </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_mercato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5">
-                                        <span class="ml-2.5 text-slate-700"><strong>Pressione commerciale e richieste mercato:</strong> Booking.com, tour operator e ospiti esteri chiedono garanzie ecologiche; vorremmo iniziare a dimostrare l'impegno senza investimenti gravosi.</span>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="awareness" value="coorte_mercato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Richieste di ospiti e portali:</strong> Booking e clienti esteri chiedono garanzie ecologiche; vorremmo rispondere senza costi eccessivi.</span>
                                     </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_certificazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5">
-                                        <span class="ml-2.5 text-slate-700"><strong>Percorso strutturato verso la conformità:</strong> abbiamo già buone pratiche attive e puntiamo a standard e certificazioni accreditate di settore (GSTC / ISO 21401).</span>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="awareness" value="coorte_certificazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Verso standard ufficiali:</strong> abbiamo già buone pratiche e puntiamo a certificazioni accreditate (GSTC / ISO 21401).</span>
                                     </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_scettica" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5">
-                                        <span class="ml-2.5 text-slate-700"><strong>Non prioritario:</strong> al momento la sostenibilità non rientra tra i nostri piani operativi o di budget.</span>
+                                    <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
+                                        <input type="radio" name="awareness" value="coorte_scettica" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
+                                        <span class="ml-2.5 text-slate-700"><strong>Non prioritario:</strong> al momento non rientra nei piani operativi o di spesa.</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
-                                    5. Quanto riterresti utile disporre di uno strumento digitale per l'analisi, la pianificazione e il monitoraggio della sostenibilità del tuo hotel?
+                                    5. Quanto ti sarebbe utile uno strumento digitale per monitorare e pianificare la sostenibilità del tuo hotel?
                                 </label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
@@ -537,26 +533,26 @@
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
                                         <input type="radio" name="utilita_percepita" value="poco_utile" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5">
-                                        <span class="ml-2 text-slate-700"><strong>Poco utile:</strong> non primario.</span>
+                                        <span class="ml-2 text-slate-700"><strong>Poco utile:</strong> non prioritario.</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- PASSO 3: Valutazione Economica e Strumenti Self-Service (Autonomia) -->
+                        <!-- PASSO 3: Valutazione Economica e Strumenti in Autonomia -->
                         <div id="step-3" class="space-y-4 hidden">
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600 leading-relaxed">
-                                <strong class="text-[#00522b]">Come funziona questo strumento:</strong> è una piattaforma <strong>100% digitale e autonoma</strong>: rispondi a 50 parametri ufficiali e il sistema calcola istantaneamente un <strong>rating di sostenibilità oggettivo conforme a standard internazionali</strong>, confrontato con 1.000+ strutture e corredato da un report PDF con la to-do list operativa.
+                            <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs text-slate-600 leading-relaxed">
+                                <strong class="text-[#00522b]">Piattaforma autonoma:</strong> rispondi a 50 parametri e ottieni subito un <strong>rating conforme a standard internazionali</strong>, il confronto con oltre 1.000 hotel e il piano operativo degli interventi.
                             </div>
 
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
-                                    6. Per un'autovalutazione digitale che rilascia un rating conforme a norme internazionali, benchmark nazionale e to-do list operativa, quale fascia di spesa una tantum riterresti corretta e accessibile per un hotel come il tuo?
+                                    6. Per un'autovalutazione con rating ufficiale, confronto nazionale e piano operativo, quale spesa una tantum riterresti equa per il tuo hotel?
                                 </label>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[42px]">
                                         <input type="radio" name="fascia_prezzo_assessment" value="meno_70" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Meno di 70 € una tantum:</strong> fascia molto economica / d'impulso</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Meno di 70 € una tantum</strong> (fascia molto economica)</span>
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[42px]">
                                         <input type="radio" name="fascia_prezzo_assessment" value="70_120" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
@@ -564,11 +560,11 @@
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[42px]">
                                         <input type="radio" name="fascia_prezzo_assessment" value="130_190" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Tra 130 € e 190 € una tantum:</strong> fascia professionale commisurata al valore del rating</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Tra 130 € e 190 € una tantum</strong> (fascia professionale per il valore dell'analisi)</span>
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[42px]">
                                         <input type="radio" name="fascia_prezzo_assessment" value="oltre_200" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Oltre 200 € una tantum:</strong> investimento strategico aziendale</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Oltre 200 € una tantum</strong> (investimento aziendale mirato)</span>
                                     </label>
                                     <label class="flex items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[42px]">
                                         <input type="radio" name="fascia_prezzo_assessment" value="dovrebbe_essere_gratis" class="text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
@@ -579,81 +575,81 @@
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
-                                    7. Una volta individuati i punti deboli dal report, quale strumento digitale standardizzato ti aiuterebbe di più a colmare i gap in piena autonomia con il tuo team?
+                                    7. Individuati i punti deboli dal report, quale strumento autonomo aiuterebbe di più il tuo team a colmare le carenze?
                                 </label>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="upsell_self_service" value="corsi_formazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Corsi di formazione online per il personale:</strong> brevi moduli pratici sui temi chiave (es. riduzione sprechi in cucina, accoglienza sostenibile, green claims).</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Corsi online per il personale:</strong> brevi moduli pratici per reparto (riduzione sprechi, accoglienza, comunicazione trasparente).</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="upsell_self_service" value="checklist_reparto" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Checklist operative di reparto:</strong> schede d'azione pronte per governante, manutentori e reception.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Schede e controlli operativi di reparto:</strong> indicazioni pratiche pronte per piani, manutenzione e ricevimento.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="upsell_self_service" value="kit_documentale" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Kit documentale iniziale:</strong> modelli di policy, registri di monitoraggio e procedure standardizzate pre-impostate.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Kit documentale iniziale:</strong> modelli di linee guida, registri di controllo e procedure preimpostate.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="upsell_self_service" value="nessuno_autonomia" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Nessuno strumento aggiuntivo:</strong> ci basta la to-do list del report per organizzarci da soli.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Nessuno strumento aggiuntivo:</strong> ci basta il piano d'azione del report per organizzarci da soli.</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- PASSO 4: Approccio alla Certificazione Accreditata di Terza Parte e Attestato -->
-                        <div id="step-4" class="space-y-4 sm:space-y-5 hidden">
+                        <!-- PASSO 4: Percorso verso la Certificazione Accreditata e Attestato -->
+                        <div id="step-4" class="space-y-4 hidden">
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
-                                    8. In vista di un percorso verso certificazioni accreditate (GSTC o ISO 21401, rilasciate da organismi terzi indipendenti), quale approccio riterresti più efficace per il tuo hotel?
+                                    8. In vista di certificazioni accreditate (GSTC o ISO 21401 di enti terzi), quale percorso preferiresti per il tuo hotel?
                                 </label>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="approccio_certificazione" value="consulente_dedicato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Accompagnamento specialistico con consulente dedicato:</strong> un esperto che affianca la struttura in tutte le fasi (analisi iniziale dei gap, verifica documentale e pre-audit) prima dell'ispezione dell'ente certificatore terzo.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Consulente dedicato:</strong> un esperto che affianca la struttura in tutte le fasi (analisi carenze, documenti e verifica preliminare) prima dell'ispezione dell'ente terzo.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="approccio_certificazione" value="autonomia_kit" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Preparazione autonoma guidata da kit e checklist:</strong> gestione interamente interna al team alberghiero attraverso modelli procedurali, registri e linee guida standardizzate.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Autonomia con modelli e procedure:</strong> gestione interna al personale tramite linee guida, schede e registri standardizzati.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="approccio_certificazione" value="formula_mista" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Formula mista con verifiche periodiche:</strong> gestione operativa interna al personale affiancata da check-point mirati di validazione con un consulente esperto nei passaggi chiave.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Formula mista:</strong> lavoro operativo svolto internamente con verifiche periodiche di un consulente nei passaggi chiave.</span>
                                     </label>
                                     <label class="flex items-start p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
                                         <input type="radio" name="approccio_certificazione" value="nessun_interesse" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Nessun interesse per la certificazione formale:</strong> puntiamo esclusivamente all'efficienza interna e alla riduzione dei costi vivi senza percorsi verso marchi terzi.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Nessun interesse:</strong> puntiamo solo a ridurre consumi e costi vivi senza certificazioni o marchi terzi.</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-1 font-sans">
-                                    9. Sulla base dei risultati dell'autovalutazione, che valore avrebbe per il tuo hotel disporre di un attestato formale con codice di verifica internazionale (esponibile su Booking.com e sito web)?
+                                    9. Che valore avrebbe un attestato con codice di verifica per sito web e portali di prenotazione basato sull'autovalutazione?
                                 </label>
                                 <span class="text-[11px] text-slate-500 block mb-2 font-sans italic">
-                                    Nota: l'attestato comprova l'avvenuta autovalutazione conforme agli standard e non sostituisce una certificazione accreditata di terza parte.
+                                    Nota: attesta l'autovalutazione conforme agli standard; non sostituisce una certificazione accreditata di terza parte.
                                 </span>
                                 <div class="space-y-2 text-xs">
                                     <label class="flex items-start sm:items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
                                         <input type="radio" name="valore_attestato" value="alto" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Alto valore:</strong> utile per comunicare trasparenza, sostenere tariffe più alte (ADR) e attrarre clientela estera.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Alto valore:</strong> utile per comunicare trasparenza, sostenere prezzi camera più elevati e attrarre clientela estera.</span>
                                     </label>
                                     <label class="flex items-start sm:items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
                                         <input type="radio" name="valore_attestato" value="medio" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Medio valore:</strong> utile purché sia riconosciuto dai portali di prenotazione (OTA).</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Medio valore:</strong> utile purché sia riconosciuto dai portali di prenotazione (come Booking.com).</span>
                                     </label>
                                     <label class="flex items-start sm:items-center p-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
                                         <input type="radio" name="valore_attestato" value="basso" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-3.5 w-3.5 shrink-0">
-                                        <span class="ml-2.5 text-slate-700"><strong>Basso valore:</strong> ci interessa soprattutto l'analisi interna per ridurre consumi e sprechi.</span>
+                                        <span class="ml-2.5 text-slate-700"><strong>Basso valore:</strong> ci interessa soprattutto l'analisi interna per ridurre consumi e costi.</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="pt-3 border-t border-slate-200">
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-2 font-sans">
-                                    10. Quale fascia di quota annuale riterresti equa per mantenere la validità dell'attestato nel tempo (con QR code e verificabilità online)?
+                                    10. Quale fascia di quota annuale riterresti equa per mantenere valido l'attestato verificabile online (con codice QR)?
                                 </label>
                                 <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs">
                                     <label class="flex items-center p-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[40px]">
@@ -676,12 +672,12 @@
                             </div>
                         </div>
 
-                        <!-- PASSO 5: Feedback Aperto e Invio Accesso Assessment -->
+                        <!-- PASSO 5: Riscontro Aperto e Invio Accesso -->
                         <div id="step-5" class="space-y-4 hidden">
                             <div>
                                 <label class="block text-xs sm:text-sm font-bold text-[#2b2b2b] mb-1 font-sans">
-                                    11. Il tuo principale dubbio o ostacolo verso l'adozione di uno strumento di questo tipo:
-                                    <span class="text-[11px] sm:text-xs font-normal text-slate-400 block font-sans">(Facoltativo: tempo richiesto al personale, costi, reale riscontro sui portali...)</span>
+                                    11. Il tuo principale dubbio o ostacolo verso l'adozione di questo strumento:
+                                    <span class="text-[11px] sm:text-xs font-normal text-slate-400 block font-sans">(Facoltativo: tempo richiesto al personale, costi, reale riscontro sui portali di prenotazione...)</span>
                                 </label>
                                 <textarea id="principale_ostacolo" rows="2" placeholder="Es. Temo richieda troppo tempo al personale di reception o manutenzione..." class="w-full bg-white border border-slate-300 rounded-lg py-2 px-3 text-xs text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]"></textarea>
                             </div>
@@ -691,7 +687,7 @@
                                     12. Dove desideri ricevere l'accesso prioritario ed esclusivo alla nuova piattaforma?
                                 </label>
                                 <p class="text-[11px] text-slate-500 mb-3">
-                                    Inserisci i riferimenti aziendali per riservare l'accesso prioritario per la tua struttura e ricevere il riconoscimento dedicato al tuo tempo (entro il 20 settembre 2026).
+                                    Inserisci i riferimenti aziendali per riservare l'accesso alla tua struttura (entro il 20 settembre 2026).
                                 </p>
                                 <div class="space-y-2.5 text-xs">
                                     <div>
@@ -737,7 +733,7 @@
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold text-[#00522b] font-brand">Grazie per il tuo prezioso contributo!</h3>
                         <p class="text-xs text-slate-600 max-w-sm mx-auto leading-relaxed">
-                            Le tue risposte sono state registrate con successo. Abbiamo riservato per la tua struttura l'<strong>accesso prioritario ed esclusivo alla nuova piattaforma</strong>: non appena online riceverai il link dedicato con il riconoscimento speciale per aver condiviso la tua esperienza sul campo.
+                            Le tue risposte sono state registrate con successo. Abbiamo riservato per la tua struttura l'<strong>accesso prioritario ed esclusivo alla nuova piattaforma</strong>: non appena online riceverai il collegamento dedicato con il riconoscimento speciale per la tua esperienza condivisa.
                         </p>
                     </div>
 
@@ -755,7 +751,7 @@
                     Incontriamoci di persona a Rimini
                 </div>
                 <div class="text-xs text-slate-600 mb-3">
-                    Vuoi approfondire l'indice Susti o vedere una demo dal vivo? Saremo presenti ai principali appuntamenti di ottobre:
+                    Vuoi approfondire l'indice Susti o vedere una dimostrazione dal vivo? Saremo presenti ai principali appuntamenti di ottobre:
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -811,7 +807,7 @@
                 
                 <div class="text-center md:text-right text-xs text-slate-500">
                     <div>Standard di riferimento: <strong class="text-slate-700">GSTC Industry</strong> · <strong class="text-slate-700">ISO 21401</strong> · <strong class="text-slate-700">ISO 17033</strong></div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Metodologia di misurazione e benchmarking per l'ospitalità responsabile</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Metodologia di misurazione e confronto per l'ospitalità responsabile</div>
                 </div>
             </div>
 
@@ -821,7 +817,7 @@
                     <span>·</span>
                     <a href="mailto:info@territorisostenibili.it" class="text-[#007f3d] hover:underline font-medium">info@territorisostenibili.it</a>
                     <span>·</span>
-                    <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="hover:text-[#007f3d] underline">Privacy Policy</a>
+                    <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="hover:text-[#007f3d] underline">Informativa Privacy</a>
                 </div>
             </div>
             
@@ -874,7 +870,7 @@
             const stepLabels = [
                 'Passo 1 di 5: Profilo della struttura',
                 'Passo 2 di 5: Raccolta dati e sostenibilità attuale',
-                'Passo 3 di 5: Valutazione rating economico e autonomia',
+                'Passo 3 di 5: Valutazione economica e autonomia',
                 'Passo 4 di 5: Certificazioni accreditate e attestato',
                 'Passo 5 di 5: Invio e accesso prioritario'
             ];
@@ -907,7 +903,7 @@
                 const upsellSelfService = document.querySelector('input[name="upsell_self_service"]:checked');
 
                 if (!fasciaPrezzo) { showError('Seleziona una fascia di spesa ritenuta corretta.'); return false; }
-                if (!upsellSelfService) { showError('Indica quale strumento ti aiuterebbe di più a colmare i gap in autonomia.'); return false; }
+                if (!upsellSelfService) { showError('Indica quale strumento aiuterebbe di più il tuo team.'); return false; }
             } else if (currentStep === 4) {
                 const approccioCert = document.querySelector('input[name="approccio_certificazione"]:checked');
                 const valore = document.querySelector('input[name="valore_attestato"]:checked');
@@ -1015,6 +1011,17 @@
                 const isMobile = window.innerWidth < 640;
                 new Chart(radarCanvas.getContext('2d'), {
                     type: 'radar',
+                    plugins: [{
+                        id: 'customCanvasBackgroundColor',
+                        beforeDraw: (chart) => {
+                            const {ctx} = chart;
+                            ctx.save();
+                            ctx.globalCompositeOperation = 'destination-over';
+                            ctx.fillStyle = '#ffffff';
+                            ctx.fillRect(0, 0, chart.width, chart.height);
+                            ctx.restore();
+                        }
+                    }],
                     data: {
                         labels: [
                             'Rifiuti (83%)',
@@ -1042,7 +1049,7 @@
                                 label: 'Media Nazionale (67%)',
                                 data: [55, 48, 58, 40, 60, 52, 50, 65, 58, 62],
                                 backgroundColor: 'transparent',
-                                borderColor: '#cbd5e1',
+                                borderColor: '#94a3b8',
                                 borderWidth: 1.5,
                                 borderDash: [4, 4],
                                 pointRadius: isMobile ? 1.5 : 2,
@@ -1059,18 +1066,21 @@
                                 labels: {
                                     boxWidth: 8,
                                     font: { family: 'Inter', size: isMobile ? 9 : 10, weight: '600' },
-                                    color: '#475569',
+                                    color: '#1e293b',
                                     padding: isMobile ? 8 : 10
                                 }
                             }
                         },
                         scales: {
                             r: {
-                                angleLines: { color: '#e2e8f0' },
-                                grid: { color: '#f1f5f9' },
+                                angleLines: { color: '#cbd5e1' },
+                                grid: { color: '#e2e8f0' },
                                 pointLabels: {
-                                    font: { family: 'Inter', size: isMobile ? 8.5 : 9.5, weight: '600' },
-                                    color: '#2b2b2b'
+                                    font: { family: 'Inter', size: isMobile ? 8.5 : 9.5, weight: '700' },
+                                    color: '#0f172a',
+                                    backdropColor: 'rgba(255, 255, 255, 0.95)',
+                                    backdropPadding: { top: 2, bottom: 2, left: 5, right: 5 },
+                                    borderRadius: 4
                                 },
                                 suggestedMin: 0,
                                 suggestedMax: 100,
