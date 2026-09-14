@@ -1,0 +1,16 @@
+{
+"cleanUrls": true,
+"redirects": [
+{
+"source": "/",
+"destination": "/sondaggio",
+"permanent": false
+}
+],
+"rewrites": [
+{
+"source": "/sondaggio",
+"destination": "/index.html"
+}
+]
+}
