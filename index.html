@@ -1,10 +1,552 @@
 <!DOCTYPE html>
-<html>
+<html lang="it" class="scroll-smooth">
 <head>
-  <meta http-equiv="refresh" content="0; url=/sondaggio">
-  <script>window.location.href = "/sondaggio";</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>SUSTI® – Sustainable Tourism Index | La Sostenibilità Alberghiera Misurabile</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Michroma&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        brand: ['Eurostile', 'Eurostile LT Pro', 'Michroma', 'Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        susti: {
+                            foresta: '#00522b',
+                            darkgreen: '#007f3d',
+                            midgreen: '#69a82f',
+                            lime: '#94c11f',
+                            lightgreen: '#c6d86b',
+                            onda: '#37aae1',
+                            antracite: '#2b2b2b',
+                            app: '#f3f6f3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Eurostile';
+            src: local('Eurostile LT Pro Unicode Bold'), local('Eurostile LT Pro Bold'), local('Eurostile Bold'), local('Eurostile');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            background-color: #f3f6f3;
+            color: #2b2b2b;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-brand {
+            font-family: 'Eurostile', 'Eurostile LT Pro', 'Michroma', 'Syne', sans-serif;
+            letter-spacing: -0.02em;
+        }
+    </style>
 </head>
-<body>
-  <p>Reindirizzamento a <a href="/sondaggio">susti.it/sondaggio</a>...</p>
+<body class="font-sans antialiased selection:bg-[#94c11f] selection:text-[#00522b] min-h-screen flex flex-col justify-between">
+
+    <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 sm:gap-4 shrink-0">
+                <a href="/" class="inline-flex items-center group shrink-0" title="SUSTI® — Sustainable Tourism Index">
+                    <img 
+                        src="susti-lockup-claim-lime.svg" 
+                        alt="SUSTI® — Sustainable Tourism Index" 
+                        class="h-7 sm:h-9 w-auto max-w-[170px] sm:max-w-[220px] object-contain select-none" 
+                        onerror="if(!this.dataset.tried){ this.dataset.tried='1'; this.src='./susti-lockup-claim-lime.svg'; } else if(this.dataset.tried==='1'){ this.dataset.tried='2'; this.src='assets/susti-lockup-claim-lime.svg'; }" 
+                    />
+                </a>
+
+                <div class="hidden md:flex items-center pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
+                    <span class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">
+                        Iniziativa di <strong class="text-slate-600 font-semibold">Territori Sostenibili Società Benefit</strong>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2.5 shrink-0">
+                <span class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-50 text-[#007f3d] border border-emerald-200">
+                    <span class="w-2 h-2 rounded-full bg-[#007f3d] animate-pulse"></span>
+                    Nuova Piattaforma · Ottobre 2026
+                </span>
+                <a href="/sondaggio" class="text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap active:scale-95 flex items-center gap-1.5">
+                    <span>Partecipa al sondaggio</span>
+                    <span class="hidden sm:inline">(3 min)</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-[#00522b] text-white pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20 overflow-hidden border-b border-emerald-900">
+            <div class="absolute inset-0 -z-10 opacity-20">
+                <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#94c11f] blur-[150px] rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-white/10 text-[#c6d86b] border border-white/15 backdrop-blur mb-4 sm:mb-6">
+                    <span class="w-2 h-2 rounded-full bg-[#94c11f] animate-pulse shrink-0"></span>
+                    <span>Territori Sostenibili dal 2015 · SUSTI® attivo dal 2022 con oltre 1.000 strutture</span>
+                </div>
+
+                <h1 class="font-brand text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-snug sm:leading-tight">
+                    Dalla teoria alla gestione reale: la sostenibilità alberghiera diventa misurabile, digitale e operativa.
+                </h1>
+
+                <p class="mt-3.5 sm:mt-5 text-xs sm:text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light">
+                    A ottobre 2026 debutta la versione completamente rinnovata di SUSTI®: la piattaforma digitale progettata per gli hotel indipendenti per monitorare consumi e costi operativi, rispondere ai portali di prenotazione e digitalizzare la preparazione verso le certificazioni internazionali GSTC e ISO 21401.
+                </p>
+
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                    <a href="/sondaggio" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition-all active:scale-98">
+                        Partecipa al sondaggio pre-lancio (3 min)
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#eventi-rimini" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition-all">
+                        Incontriamoci a Rimini
+                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 sm:-mt-8 relative z-20">
+            <div class="bg-white border-2 border-[#94c11f] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+                <div class="flex items-start gap-3.5">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-[#007f3d] flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <div>
+                        <div class="inline-block text-[10.5px] sm:text-xs font-bold uppercase tracking-wider text-[#007f3d] mb-0.5">
+                            Consultazione riservata ai decisori alberghieri · Entro il 30 Settembre 2026
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-[#2b2b2b] font-brand leading-snug">
+                            Co-Design: Aiutaci a tarare SUSTI® e ottieni il codice di accesso prioritario ed esclusivo.
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Bastano 10 risposte rapide (3 minuti) per condividere le priorità operative del tuo hotel. Al termine riceverai subito via email il tuo codice personale per attivare la piattaforma in anteprima.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto shrink-0">
+                    <a href="/sondaggio" class="w-full md:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#007f3d] hover:bg-[#00522b] shadow transition whitespace-nowrap active:scale-95">
+                        Inizia il questionario (3 min) →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 sm:py-16 bg-[#f3f6f3]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-8 sm:mb-12">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Metodologia & Valore Operativo</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Cosa fa SUSTI® per la tua struttura</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
+                        Uno strumento snello e accessibile che traduce i requisiti di sostenibilità in dati oggettivi, risparmi economici e vantaggi competitivi sul mercato.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+                    
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 rounded-xl bg-[#007f3d]/10 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                            01
+                        </div>
+                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Monitoraggio Costi & 50 Temi</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                            Mappa puntualmente consumi energetici, idrici, rifiuti e filiera. Individua le inefficienze gestionali nascoste riducendo subito i costi vivi in bolletta.
+                        </p>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-[#007f3d]">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Efficienza immediata e ROI</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 rounded-xl bg-[#69a82f]/15 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                            02
+                        </div>
+                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Benchmark con oltre 1.000 Hotel</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                            Attivo dal 2022: confronta le prestazioni della tua struttura con la media reale di oltre 1.000 alberghi italiani già analizzati per capire il tuo vero posizionamento.
+                        </p>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-[#69a82f]">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Dati reali dal 2022</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 rounded-xl bg-[#37aae1]/15 text-[#37aae1] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                            03
+                        </div>
+                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Ponte per Certificazioni Ufficiali</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                            Allineato ai criteri internazionali GSTC e ISO 21401: digitalizza la preparazione della documentazione e rispondi con dati oggettivi ai requisiti di Booking.com.
+                        </p>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-[#37aae1]">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Norme anti-greenwashing</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white border-y border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-6">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Dimostrazione del Software</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1 font-brand">Anteprima del Report: analisi e piano operativo</h2>
+                    <p class="text-xs text-slate-500 mt-1 max-w-xl mx-auto leading-relaxed">
+                        Ecco come si presenta il Report generato dalla piattaforma: rating complessivo, benchmark nazionale e indicazioni operative prioritarie.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-300 rounded-3xl shadow-xl overflow-hidden">
+                    
+                    <div class="bg-slate-800 text-slate-300 px-4 py-3 flex items-center justify-between border-b border-slate-700">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-[#ff5f56] inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#27c93f] inline-block"></span>
+                            <span class="hidden sm:inline-block text-[11px] text-slate-400 font-mono ml-2">app.susti.it/report/demo-anteprima</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#94c11f] bg-[#00522b] rounded-md border border-[#94c11f]/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#94c11f] animate-pulse"></span>
+                                Facsimile Piattaforma · Anteprima
+                            </span>
+                            <span class="text-[11px] text-slate-300 font-medium bg-slate-700/80 px-2.5 py-0.5 rounded border border-slate-600 hidden md:inline-flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#37aae1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                Report Operativo PDF
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-7 bg-[#fcfdfc] space-y-5 sm:space-y-6">
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center p-3.5 sm:p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                            
+                            <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-4 sm:p-5 bg-[#f3f6f3] rounded-2xl border border-slate-200 w-full">
+                                <div class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Rating di Sostenibilità</div>
+                                <div class="relative w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center">
+                                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 160 160">
+                                        <circle cx="80" cy="80" r="68" stroke="#e2e8f0" stroke-width="12" fill="transparent"/>
+                                        <circle cx="80" cy="80" r="68" stroke="#94c11f" stroke-width="12" stroke-linecap="round" fill="transparent" stroke-dasharray="427" stroke-dashoffset="188"/>
+                                    </svg>
+                                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                        <span class="font-sans text-3xl sm:text-4xl font-extrabold text-[#2b2b2b] leading-none">56</span>
+                                        <span class="text-xs font-bold text-slate-400 mt-1">/ 100</span>
+                                    </div>
+                                </div>
+
+                                <span class="mt-2.5 px-3 py-0.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase bg-amber-100 text-amber-900 border border-amber-300">
+                                    Nella Media
+                                </span>
+                                <div class="text-[10.5px] sm:text-[11px] text-slate-500 mt-2 font-medium">
+                                    Media nazionale: <strong class="text-slate-800 font-bold">67%</strong> (oltre 1.000 strutture dal 2022)
+                                </div>
+                            </div>
+
+                            <div class="lg:col-span-8 flex flex-col items-center w-full">
+                                <div class="w-full h-[250px] sm:h-[280px] relative bg-white rounded-xl">
+                                    <canvas id="sustiRadarChartHome"></canvas>
+                                </div>
+                                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-[10.5px] sm:text-[11px] text-slate-600 mt-2 font-medium">
+                                    <span class="text-slate-400 font-bold uppercase text-[9.5px]">3 Dimensioni:</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#007f3d] mr-1.5"></span>Dimensione Ambientale</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#69a82f] mr-1.5"></span>Dimensione Sociale</span>
+                                    <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-[#37aae1] mr-1.5"></span>Dimensione Economica</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
+                            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
+                                    <span>Dimensione Ambientale</span>
+                                    <span class="text-[#007f3d] font-bold">35% (14/40 pt)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                                    <div class="bg-[#007f3d] h-full" style="width: 35%"></div>
+                                </div>
+                                <p class="text-[11px] text-slate-600">Rifiuti (83%), Idrico (78%), Mobilità (29%), Energia (0%).</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
+                                    <span>Dimensione Sociale</span>
+                                    <span class="text-[#69a82f] font-bold">59% (19/32 pt)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                                    <div class="bg-[#69a82f] h-full" style="width: 59%"></div>
+                                </div>
+                                <p class="text-[11px] text-slate-600">Collaboratori (56%), Comunità locale (63%), Inclusione (63%).</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                <div class="flex justify-between font-sans font-bold text-slate-800 mb-1.5">
+                                    <span>Dimensione Economica</span>
+                                    <span class="text-[#37aae1] font-bold">82% (23/28 pt)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                                    <div class="bg-[#37aae1] h-full" style="width: 82%"></div>
+                                </div>
+                                <p class="text-[11px] text-slate-600">Territorio (90%), Comunicazione (83%), Fornitori (67%).</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventi-rimini" class="py-12 sm:py-16 bg-[#f3f6f3]">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-8 sm:mb-10">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Incontriamoci di persona</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1 font-brand">Il rilancio ufficiale a Rimini · Ottobre 2026</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto leading-relaxed">
+                        Saremo presenti ai due principali appuntamenti autunnali dell'ospitalità italiana. Vieni a scoprire in anteprima la piattaforma SUSTI® o a ritirare il tuo Report personalizzato.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                    
+                    <!-- BOX HOSPITALITY DAY -->
+                    <div class="bg-white border-2 border-emerald-100 hover:border-[#007f3d] rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm transition group">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-[#007f3d]/10 text-[#007f3d] font-bold text-xs sm:text-sm font-sans">
+                                13 OTTOBRE 2026
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-medium">Palacongressi di Rimini</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-brand group-hover:text-[#00522b] transition">
+                            Hospitality Day 2026
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            L'evento di riferimento per il management alberghiero. Presenteremo in anteprima le funzionalità del nuovo software, con dimostrazioni pratiche di calcolo del rating e generazione automatica del piano operativo.
+                        </p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[11px] text-slate-500 font-medium">Incontro con Robert Kropfitsch & il team</span>
+                            <a href="mailto:info@territorisostenibili.it?subject=Incontro%20Hospitality%20Day%202026" class="text-xs font-bold text-[#007f3d] hover:underline flex items-center gap-1">
+                                Fissa incontro →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BOX TTG TRAVEL EXPERIENCE -->
+                    <div class="bg-white border-2 border-lime-100 hover:border-[#94c11f] rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm transition group">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-[#94c11f]/20 text-[#00522b] font-bold text-xs sm:text-sm font-sans">
+                                14 – 16 OTTOBRE 2026
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-medium">Fiera di Rimini</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-brand group-hover:text-[#00522b] transition">
+                            TTG Travel Experience 2026
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            La fiera B2B del turismo in Italia. Tre giornate dedicate all'evoluzione della domanda internazionale, alle nuove normative anti-greenwashing e ai percorsi di certificazione accreditata GSTC e ISO 21401.
+                        </p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[11px] text-slate-500 font-medium">Territori Sostenibili Società Benefit</span>
+                            <a href="mailto:info@territorisostenibili.it?subject=Incontro%20TTG%20Rimini%202026" class="text-xs font-bold text-[#007f3d] hover:underline flex items-center gap-1">
+                                Fissa incontro →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-slate-500">
+                        Vuoi fissare un appuntamento riservato durante le giornate di fiera? Scrivici direttamente a <a href="mailto:info@territorisostenibili.it" class="text-[#007f3d] font-semibold underline">info@territorisostenibili.it</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#00522b] text-white py-10 sm:py-12 border-t border-emerald-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-white/10 text-[#c6d86b]">
+                    Accesso Riservato ed Esclusivo
+                </span>
+                <h2 class="text-xl sm:text-3xl font-bold font-brand">
+                    Sei un albergatore? Ricevi il tuo codice prima del rilascio ufficiale.
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-200 max-w-xl mx-auto font-light leading-relaxed">
+                    Il sondaggio è attivo fino al 30 settembre 2026: rispondi in 3 minuti e assicurati l'accesso prioritario alla nuova piattaforma SUSTI®.
+                </p>
+                <div class="pt-2">
+                    <a href="/sondaggio" class="inline-flex items-center justify-center px-7 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition active:scale-95">
+                        Inizia il questionario (3 minuti) →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-6 sm:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-5 sm:space-y-6">
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group" title="Territori Sostenibili Società Benefit">
+                    <img 
+                        src="Territori Sostenibili.png" 
+                        alt="Territori Sostenibili Società Benefit" 
+                        class="h-10 w-auto object-contain" 
+                        onerror="if(!this.dataset.triedCase){ this.dataset.triedCase='1'; this.src='./Territori Sostenibili.png'; } else if(this.dataset.triedCase==='1'){ this.dataset.triedCase='2'; this.src='territori-sostenibili.png'; } else if(this.dataset.triedCase==='2'){ this.dataset.triedCase='3'; this.src='../Territori Sostenibili.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }" 
+                    />
+                    <div class="items-center gap-2.5 hidden">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 45 L25 15 L40 38" stroke="#a06334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 45 C15 32 28 18 36 28 C37 38 27 46 22 45 Z" fill="#007f3d"/>
+                            <path d="M23 44 C28 36 32 30 35 29" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M36 32 C32 18 45 6 52 16 C53 26 43 34 36 32 Z" fill="#94c11f"/>
+                            <path d="M37 31 C42 24 47 18 51 17" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M42 42 C42 30 58 26 62 36 C60 45 48 48 42 42 Z" fill="#69a82f"/>
+                            <path d="M43 41 C50 38 56 34 61 36" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M12 56 C28 50 48 54 65 52 C52 57 32 58 12 56 Z" fill="#1a8ad4"/>
+                            <path d="M18 60 C32 56 50 58 68 56" stroke="#37aae1" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex flex-col text-left">
+                            <span class="font-extrabold text-[#007f3d] text-base leading-none tracking-tight">territori</span>
+                            <span class="font-extrabold text-[#1a8ad4] text-base leading-none tracking-tight">sostenibili</span>
+                            <span class="text-[9.5px] font-medium text-slate-700 tracking-wider uppercase mt-0.5">Società Benefit</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="text-center md:text-right text-xs text-slate-500">
+                    <div>Standard di riferimento: <strong class="text-slate-700">GSTC Industry</strong> · <strong class="text-slate-700">ISO 21401</strong> · <strong class="text-slate-700">ISO 17033</strong></div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Metodologia di misurazione e benchmark per l'ospitalità responsabile</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 pt-2 border-t border-slate-100">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <span>SUSTI® – Sustainable Tourism Index</span>
+                    <span>·</span>
+                    <a href="/sondaggio" class="text-[#007f3d] hover:underline font-medium">Sondaggio Decisori</a>
+                    <span>·</span>
+                    <a href="mailto:info@territorisostenibili.it" class="text-slate-600 hover:text-[#007f3d] underline">info@territorisostenibili.it</a>
+                </div>
+                <div>
+                    <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 hover:text-[#007f3d]">Territori Sostenibili Srl Società Benefit</a> – P.I. 08449100968 · © 2026
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const radarCanvas = document.getElementById('sustiRadarChartHome');
+            if (radarCanvas) {
+                const isMobile = window.innerWidth < 640;
+                new Chart(radarCanvas.getContext('2d'), {
+                    type: 'radar',
+                    plugins: [{
+                        id: 'customCanvasBackgroundColor',
+                        beforeDraw: (chart) => {
+                            const {ctx} = chart;
+                            ctx.save();
+                            ctx.globalCompositeOperation = 'destination-over';
+                            ctx.fillStyle = '#ffffff';
+                            ctx.fillRect(0, 0, chart.width, chart.height);
+                            ctx.restore();
+                        }
+                    }],
+                    data: {
+                        labels: [
+                            'Rifiuti (83%)',
+                            'Energia (0%)',
+                            'Idrico (78%)',
+                            'Mobilità (29%)',
+                            'Team (56%)',
+                            'Comunità (63%)',
+                            'Inclusione (63%)',
+                            'Territorio (90%)',
+                            'Fornitori (67%)',
+                            'Comunicaz. (83%)'
+                        ],
+                        datasets: [
+                            {
+                                label: 'Tuo Hotel',
+                                data: [83, 0, 78, 29, 56, 63, 63, 90, 67, 83],
+                                backgroundColor: 'rgba(148, 193, 31, 0.25)',
+                                borderColor: '#007f3d',
+                                borderWidth: 2.5,
+                                pointBackgroundColor: '#007f3d',
+                                pointRadius: isMobile ? 2.5 : 3.5
+                            },
+                            {
+                                label: 'Media Nazionale (67%)',
+                                data: [55, 48, 58, 40, 60, 52, 50, 65, 58, 62],
+                                backgroundColor: 'transparent',
+                                borderColor: '#94a3b8',
+                                borderWidth: 1.5,
+                                borderDash: [4, 4],
+                                pointRadius: isMobile ? 1.5 : 2,
+                                pointBackgroundColor: '#94a3b8'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    boxWidth: 8,
+                                    font: { family: 'Inter', size: isMobile ? 9 : 10, weight: '600' },
+                                    color: '#1e293b',
+                                    padding: isMobile ? 8 : 10
+                                }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: { color: '#cbd5e1' },
+                                grid: { color: '#e2e8f0' },
+                                pointLabels: {
+                                    font: { family: 'Inter', size: isMobile ? 8.5 : 9.5, weight: '700' },
+                                    color: '#0f172a',
+                                    backdropColor: 'rgba(255, 255, 255, 0.95)',
+                                    backdropPadding: { top: 2, bottom: 2, left: 5, right: 5 },
+                                    borderRadius: 4
+                                },
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: { display: false }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
