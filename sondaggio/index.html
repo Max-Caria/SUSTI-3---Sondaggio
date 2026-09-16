@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
-    <title>Indagine Sostenibilità Alberghiera 2026 | SUSTI® – Sustainable Tourism Index</title>
+    <title>SUSTI® Hotel – Il Metodo per la Sostenibilità Alberghiera Consapevole | Territori Sostenibili</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,58 +55,46 @@
             font-family: 'Eurostile', 'Eurostile LT Pro', 'Michroma', 'Syne', sans-serif;
             letter-spacing: -0.02em;
         }
-
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { 
-            -webkit-appearance: none; 
-            margin: 0; 
-        }
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        @media screen and (max-width: 640px) {
-            input, select, textarea {
-                font-size: 16px !important;
-            }
-        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-[#94c11f] selection:text-[#00522b] min-h-screen flex flex-col justify-between">
 
+    <!-- HEADER DI NAVIGAZIONE -->
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
+        <div class="max-w-6xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
             <div class="flex items-center gap-2.5 sm:gap-4 shrink-0">
-                <a href="#" class="inline-flex items-center group shrink-0" title="SUSTI® — Sustainable Tourism Index">
+                <a href="/" class="inline-flex items-center group shrink-0" title="SUSTI® — Sustainable Tourism Index">
                     <img 
-                        src="/susti-lockup-claim-lime.svg" 
+                        src="susti-lockup-claim-lime.svg" 
                         alt="SUSTI® — Sustainable Tourism Index" 
                         class="h-7 sm:h-9 w-auto max-w-[170px] sm:max-w-[220px] object-contain select-none" 
-                        onerror="if(!this.dataset.tried){ this.dataset.tried='1'; this.src='../susti-lockup-claim-lime.svg'; } else if(this.dataset.tried==='1'){ this.dataset.tried='2'; this.src='susti-lockup-claim-lime.svg'; }" 
+                        onerror="if(!this.dataset.tried){ this.dataset.tried='1'; this.src='./susti-lockup-claim-lime.svg'; } else if(this.dataset.tried==='1'){ this.dataset.tried='2'; this.src='assets/susti-lockup-claim-lime.svg'; }" 
                     />
                 </a>
 
-                <div class="hidden sm:flex items-center pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
+                <div class="hidden md:flex items-center pl-3 sm:pl-4 border-l border-slate-200 py-0.5">
                     <span class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">
-                        Iniziativa di <strong class="text-slate-600 font-semibold block sm:inline">Territori Sostenibili Società Benefit</strong>
+                        Sviluppato da <strong class="text-slate-600 font-semibold">Territori Sostenibili Società Benefit</strong>
                     </span>
                 </div>
             </div>
             
-            <div class="flex items-center gap-2 shrink-0">
-                <span class="hidden lg:inline-block text-[11px] text-slate-500 font-medium">
-                    Indagine riservata ai titolari e direttori
+            <div class="flex items-center gap-2.5 shrink-0">
+                <span class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-50 text-[#007f3d] border border-emerald-200">
+                    <span class="w-2 h-2 rounded-full bg-[#007f3d] animate-pulse"></span>
+                    Nuova Versione Digitale · Ottobre 2026
                 </span>
-                <a href="#consultazione-form" class="text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap active:scale-95">
-                    <span class="inline sm:hidden">Partecipa (3 min)</span>
-                    <span class="hidden sm:inline">Partecipa al sondaggio (3 min)</span>
+                <a href="/sondaggio" class="text-[11px] sm:text-xs font-semibold px-3.5 sm:px-4 py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap active:scale-95 flex items-center gap-1.5">
+                    <span>Partecipa al sondaggio</span>
+                    <span class="hidden sm:inline">(3 min)</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- SEZIONE HERO -->
+        <!-- HERO SECTION -->
         <section class="relative bg-[#00522b] text-white pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20 overflow-hidden border-b border-emerald-900">
             <div class="absolute inset-0 -z-10 opacity-20">
                 <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#94c11f] blur-[150px] rounded-full"></div>
@@ -115,362 +103,122 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-white/10 text-[#c6d86b] border border-white/15 backdrop-blur mb-4 sm:mb-6">
                     <span class="w-2 h-2 rounded-full bg-[#94c11f] animate-pulse shrink-0"></span>
-                    <span>Territori Sostenibili dal 2015 · SUSTI® attivo dal 2022 con oltre 1.000 strutture</span>
+                    <span>Standard ISO 21401 e GSTC Hotel · Oltre 1.000 strutture analizzate dal 2022</span>
                 </div>
 
                 <h1 class="font-brand text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-snug sm:leading-tight">
-                    Dalla teoria alla pratica: come affrontare la crescente richiesta di sostenibilità del mercato in modo strutturato.
+                    Il metodo per iniziare un percorso di sostenibilità consapevole. Un primo passo concreto, guidato, utile.
                 </h1>
 
                 <p class="mt-3.5 sm:mt-5 text-xs sm:text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto font-light">
-                    Dopo diversi anni di presenza sul mercato e raccolta dati su oltre 1.000 strutture ricettive, siamo pronti per il lancio di una versione completamente rinnovata di SUSTI®. Uno strumento per la gestione reale: monitorare consumi e costi operativi, rispondere con dati oggettivi alle richieste di sostenibilità dei portali di prenotazione (come Booking.com) e digitalizzare la preparazione verso le certificazioni internazionali riconosciute (GSTC e ISO 21401).
+                    SUSTI® è il programma di autovalutazione sviluppato da <strong>Territori Sostenibili Società Benefit</strong> per accompagnare le strutture ricettive in un percorso strutturato e progressivo. Uno strumento di lettura e orientamento che aiuta gli hotel a comprendere da dove partono e come migliorare, monitorando consumi, rispondendo con dati oggettivi ai portali di prenotazione e preparando l'organizzazione alle certificazioni internazionali riconosciute.
                 </p>
 
-                <div class="mt-5 sm:mt-6 p-3 sm:p-4 rounded-xl bg-white/10 border border-white/15 max-w-xl mx-auto flex items-center text-left gap-3 sm:gap-3.5 backdrop-blur-md">
-                    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#94c11f]/20 border border-[#94c11f]/40 text-[#c6d86b] flex items-center justify-center shrink-0">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <div class="text-xs sm:text-sm text-slate-100 leading-snug">
-                        <strong>Sondaggio entro il 30 settembre 2026 (3 min):</strong> per ringraziarti dell'esperienza condivisa, riceverai subito via email un <strong>codice univoco di accesso prioritario ed esclusivo</strong> alla nuova piattaforma.
-                    </div>
-                </div>
-
-                <div class="mt-6 sm:mt-8">
-                    <a href="#consultazione-form" class="inline-flex items-center justify-center w-full sm:w-auto px-7 sm:px-8 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition-all active:scale-98">
-                        Inizia il questionario (3 minuti)
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                    <a href="/sondaggio" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition-all active:scale-98">
+                        Partecipa al sondaggio (3 min)
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#come-funziona" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition-all">
+                        Scopri il metodo
                         <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SEZIONE FORM DEL SONDAGGIO -->
-        <section id="consultazione-form" class="py-10 sm:py-16 bg-white border-b border-slate-200">
-            <div class="max-w-3xl mx-auto px-3.5 sm:px-6">
+        <!-- BANNER CO-DESIGN / PRE-LANCIO SONDAGGIO -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 sm:-mt-8 relative z-20">
+            <div class="bg-white border-2 border-[#94c11f] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+                <div class="flex items-start gap-3.5">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-[#007f3d] flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <div>
+                        <div class="inline-block text-[10.5px] sm:text-xs font-bold uppercase tracking-wider text-[#007f3d] mb-0.5">
+                            Consultazione riservata ai decisori alberghieri · Fino al 30 Settembre 2026
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-[#2b2b2b] font-brand leading-snug">
+                            Co-Design: Aiutaci a tarare la nuova piattaforma e ricevi l'accesso prioritario ed esclusivo.
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Bastano 10 risposte rapide (3 minuti) per condividere le priorità operative del tuo hotel. Riceverai subito via email il tuo codice univoco personale per attivare la piattaforma in anteprima.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto shrink-0">
+                    <a href="/sondaggio" class="w-full md:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#007f3d] hover:bg-[#00522b] shadow transition whitespace-nowrap active:scale-95">
+                        Partecipa ora (3 min) →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COME FUNZIONA: I 3 MOMENTI CHIAVE -->
+        <section id="come-funziona" class="py-14 sm:py-20 bg-[#f3f6f3]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 
-                <div class="text-center mb-6 sm:mb-8">
-                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Sondaggio Riservato (3 minuti)</span>
-                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">La sostenibilità nella tua struttura: il tuo punto di vista</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-lg mx-auto leading-relaxed">
-                        Le tue risposte ci aiutano a calibrare questo strumento sulle reali esigenze operative degli hotel indipendenti. Al termine riceverai il tuo codice univoco per l'accesso prioritario ed esclusivo.
+                <div class="text-center mb-10 sm:mb-14">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Il Percorso Operativo</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Come funziona SUSTI®</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
+                        Un approccio progressivo e guidato per trasformare la sostenibilità da obbligo astratto a strumento di gestione quotidiana dell'albergo.
                     </p>
                 </div>
 
-                <div class="bg-[#f3f6f3] border border-slate-200 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl relative">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
                     
-                    <div class="mb-6 sm:mb-8" id="progress-container">
-                        <div class="flex justify-between text-xs sm:text-sm font-semibold text-slate-600 mb-2">
-                            <span id="step-indicator">Passo 1 di 5: Profilo del referente</span>
-                            <span id="step-progress-percent" class="text-[#007f3d] font-bold">20%</span>
+                    <!-- FASE 1: VALUTAZIONE -->
+                    <div class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#007f3d]/10 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                                01
+                            </div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-[#007f3d] mb-1">Primo Passo</div>
+                            <h3 class="text-base sm:text-lg font-bold text-[#2b2b2b] mb-2 font-sans">Valutazione Strutturata</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                                La compilazione di <strong>50 domande a risposta chiusa</strong> consente di raccogliere informazioni oggettive e definire lo stato di partenza reale della struttura ricettiva senza complessità burocratiche.
+                            </p>
                         </div>
-                        <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                            <div id="progress-bar" class="bg-[#007f3d] h-full transition-all duration-300" style="width: 20%;"></div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d]"></span>
+                            <span>Mappatura del punto di partenza</span>
                         </div>
                     </div>
 
-                    <div id="form-error" class="hidden mb-4 sm:mb-5 p-3 sm:p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm flex items-center">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2.5 shrink-0 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span id="form-error-msg">Compila tutti i campi obbligatori per procedere.</span>
+                    <!-- FASE 2: ANALISI E RESTITUZIONE -->
+                    <div class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#69a82f]/15 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                                02
+                            </div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-[#69a82f] mb-1">Dati & Benchmark</div>
+                            <h3 class="text-base sm:text-lg font-bold text-[#2b2b2b] mb-2 font-sans">Analisi e Restituzione</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                                I dati vengono elaborati per costruire il <strong>Report sintetico operativo</strong> e l'<strong>attestato verificabile</strong>, utili a comprendere subito punti di forza, aree di attenzione e scostamento rispetto alla media nazionale di oltre 1.000 hotel.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#69a82f]"></span>
+                            <span>Report operativo e attestato</span>
+                        </div>
                     </div>
 
-                    <form id="validationForm" novalidate onsubmit="event.preventDefault(); nextStep();">
-
-                        <!-- PASSO 1: RUOLO NELLA STRUTTURA -->
-                        <div id="step-1" class="space-y-4">
-                            <div>
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    1. Il tuo ruolo nella struttura ricettiva:
-                                </label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-center p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[48px]">
-                                        <input type="radio" name="ruolo" value="titolare_senior" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-[#2b2b2b] font-medium">Proprietario storico / senior</span>
-                                    </label>
-                                    <label class="flex items-center p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[48px]">
-                                        <input type="radio" name="ruolo" value="proprietario_junior" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-[#2b2b2b] font-medium">Proprietario 2ª / 3ª generazione</span>
-                                    </label>
-                                    <label class="flex items-center p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[48px]">
-                                        <input type="radio" name="ruolo" value="general_manager" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-[#2b2b2b] font-medium">Direttore / General manager</span>
-                                    </label>
-                                    <label class="flex items-center p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[48px]">
-                                        <input type="radio" name="ruolo" value="sales_marketing" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-[#2b2b2b] font-medium">Marketing / Vendite / Reception</span>
-                                    </label>
-                                </div>
+                    <!-- FASE 3: MIGLIORAMENTO -->
+                    <div class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-[#37aae1]/15 text-[#37aae1] flex items-center justify-center mb-4 font-black text-sm font-sans">
+                                03
                             </div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-[#37aae1] mb-1">Piano d'Azione</div>
+                            <h3 class="text-base sm:text-lg font-bold text-[#2b2b2b] mb-2 font-sans">Miglioramento Continuo</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                                Sulla base dei risultati emersi è possibile attivare azioni di risparmio sui consumi, checklist operative per il personale o programmi di accompagnamento specialistico verso le certificazioni ufficiali GSTC e ISO 21401.
+                            </p>
                         </div>
-
-                        <!-- PASSO 2: AWARENESS E UTILITA -->
-                        <div id="step-2" class="space-y-5 hidden">
-                            <div>
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    2. Quale frase descrive meglio l'approccio attuale del tuo hotel alla sostenibilità?
-                                </label>
-                                <div class="space-y-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_costi" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Monitoraggio consumi e costi vivi:</strong> ci concentriamo sul controllo dei consumi, senza certificazioni.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_mercato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Richieste di ospiti e portali:</strong> Booking e clienti esteri chiedono garanzie di sostenibilità; vorremmo rispondere senza costi eccessivi</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_certificazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Verso standard ufficiali:</strong> abbiamo già buone pratiche e puntiamo a certificazioni accreditate (GSTC / ISO 21401).</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="awareness" value="coorte_scettica" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Non prioritario:</strong> al momento non rientra nei piani operativi o di spesa.</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-200">
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    3. Quanto ti sarebbe utile uno strumento digitale per monitorare e pianificare la sostenibilità del tuo hotel?
-                                </label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="utilita_percepita" value="indispensabile" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4">
-                                        <span class="ml-2.5 text-slate-700"><strong>Indispensabile:</strong> urgente per la gestione.</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="utilita_percepita" value="molto_utile" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4">
-                                        <span class="ml-2.5 text-slate-700"><strong>Molto utile:</strong> orienta le scelte di spesa.</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="utilita_percepita" value="abbastanza_utile" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4">
-                                        <span class="ml-2.5 text-slate-700"><strong>Abbastanza utile:</strong> da valutare.</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="utilita_percepita" value="poco_utile" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4">
-                                        <span class="ml-2.5 text-slate-700"><strong>Poco utile:</strong> non prioritario.</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PASSO 3: Valutazione Economica e Strumenti in Autonomia -->
-                        <div id="step-3" class="space-y-5 hidden">
-                            <div class="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                <strong class="text-[#00522b]">Piattaforma autonoma:</strong> rispondi a 50 temi e ottieni subito un <strong>rating conforme agli standard internazionali</strong>, il confronto con oltre 1.000 hotel monitorati dal 2022 e il piano operativo degli interventi nel tuo <strong>Report</strong> dedicato.
-                            </div>
-
-                            <div>
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    4. Per ricevere una valutazione con rating, confronto con altre strutture e piano, quale spesa una tantum riterresti equa per il tuo hotel?
-                                </label>
-                                <div class="space-y-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[46px]">
-                                        <input type="radio" name="fascia_prezzo_assessment" value="meno_70" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Meno di 70 € una tantum</strong> (fascia molto economica)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[46px]">
-                                        <input type="radio" name="fascia_prezzo_assessment" value="70_120" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Tra 70 € e 120 € una tantum</strong> (prezzo equo attorno ai 99 €)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[46px]">
-                                        <input type="radio" name="fascia_prezzo_assessment" value="130_190" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Tra 130 € e 190 € una tantum</strong> (fascia professionale per il valore dell'analisi)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[46px]">
-                                        <input type="radio" name="fascia_prezzo_assessment" value="oltre_200" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Oltre 200 € una tantum</strong> (investimento aziendale mirato)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition min-h-[46px]">
-                                        <input type="radio" name="fascia_prezzo_assessment" value="dovrebbe_essere_gratis" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700">Mi aspetto che sia uno strumento gratuito</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-200">
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    5. Individuati i punti deboli dal Report, quale strumento autonomo aiuterebbe di più il tuo team a colmare le carenze?
-                                </label>
-                                <div class="space-y-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="upsell_self_service" value="kit_documentale" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Kit documentali iniziali:</strong> linee guida e procedure operative preimpostate.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="upsell_self_service" value="checklist_reparto" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Guide pratiche e controlli di reparto:</strong> schede operative pronte per diversi reparti, manutenzione e ricevimento.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="upsell_self_service" value="corsi_formazione" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Corsi online per il personale:</strong> brevi moduli pratici per reparto (riduzione sprechi, accoglienza, comunicazione trasparente).</span>
-                                    </label>
-                                    <label class="flex items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="upsell_self_service" value="nessuno_autonomia" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Nessuno strumento aggiuntivo:</strong> ci basta il piano d'azione del Report per organizzarci in totale autonomia.</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PASSO 4: Percorso verso la Certificazione Accreditata e Attestato -->
-                        <div id="step-4" class="space-y-5 hidden">
-                            <div>
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    6. In vista di certificazioni accreditate (GSTC o ISO 21401), quale percorso preferiresti per il tuo hotel?
-                                </label>
-                                <div class="space-y-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="approccio_certificazione" value="consulente_dedicato" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Consulente dedicato:</strong> un esperto che affianca la struttura in tutte le fasi (analisi carenze, documenti e verifica preliminare) prima dell'ispezione dell'ente di certificazione.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="approccio_certificazione" value="autonomia_kit" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>In autonomia con modelli e procedure:</strong> gestione interna tramite linee guida, schede e registri standardizzati.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="approccio_certificazione" value="formula_mista" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Formula mista:</strong> lavoro operativo svolto internamente con verifiche periodiche di un consulente nei passaggi chiave.</span>
-                                    </label>
-                                    <label class="flex items-start p-3 sm:p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer transition">
-                                        <input type="radio" name="approccio_certificazione" value="nessun_interesse" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700 leading-snug"><strong>Assenza di interesse per certificazioni terze:</strong> operiamo già in autonomia e puntiamo solo a ridurre consumi e costi vivi.</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-200">
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-1 font-sans">
-                                    7. Che valore avrebbe un attestato per sito web e portali di prenotazione basato sulla valutazione?
-                                </label>
-                                <span class="text-xs text-slate-500 block mb-2.5 font-sans italic">
-                                    (Nota: attesta una valutazione conforme agli standard; non sostituisce una certificazione ma è un'attestazione delle risposte date)
-                                </span>
-                                <div class="space-y-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-start sm:items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="valore_attestato" value="alto" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Alto valore:</strong> utile per comunicare trasparenza, sostenere prezzi camera più elevati e attrarre clientela estera.</span>
-                                    </label>
-                                    <label class="flex items-start sm:items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="valore_attestato" value="medio" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Medio valore:</strong> utile purché sia riconosciuto dai portali di prenotazione (come Booking.com).</span>
-                                    </label>
-                                    <label class="flex items-start sm:items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer">
-                                        <input type="radio" name="valore_attestato" value="basso" class="mt-0.5 sm:mt-0 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-3 text-slate-700"><strong>Basso valore:</strong> ci interessa soprattutto l'analisi interna del Report per ridurre consumi e costi.</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-200">
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-2.5 font-sans">
-                                    8. Quale fascia di quota annuale riterresti equa per mantenere valido l'attestato verificabile online (con codice QR)?
-                                </label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[44px]">
-                                        <input type="radio" name="fascia_attestato" value="meno_50" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-2.5 text-slate-700">&lt; 50 € / anno</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[44px]">
-                                        <input type="radio" name="fascia_attestato" value="50_99" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-2.5 text-slate-700">50 € – 99 € / anno</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[44px]">
-                                        <input type="radio" name="fascia_attestato" value="100_199" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-2.5 text-slate-700">100 € – 199 € / anno</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-xl bg-white border border-slate-200 hover:border-[#007f3d] cursor-pointer min-h-[44px]">
-                                        <input type="radio" name="fascia_attestato" value="oltre_200" class="text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 shrink-0">
-                                        <span class="ml-2.5 text-slate-700">&gt; 200 € / anno</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PASSO 5: Riscontro Aperto, Invio Accesso e Privacy -->
-                        <div id="step-5" class="space-y-5 hidden">
-                            <div>
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-1 font-sans">
-                                    9. Il tuo principale dubbio o ostacolo verso l'adozione di questo strumento:
-                                    <span class="text-xs font-normal text-slate-400 block font-sans mt-0.5">(Facoltativo: tempo richiesto al personale, costi, reale riscontro sui portali di prenotazione...)</span>
-                                </label>
-                                <textarea id="principale_ostacolo" rows="3" placeholder="Es. Temo richieda troppo tempo al personale di reception o manutenzione..." class="w-full bg-white border border-slate-300 rounded-xl py-2.5 px-3.5 text-xs sm:text-sm text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]"></textarea>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-200">
-                                <label class="block text-sm sm:text-base font-bold text-[#2b2b2b] mb-1 font-sans">
-                                    10. Dove desideri ricevere il codice univoco per l'accesso prioritario ed esclusivo?
-                                </label>
-                                <p class="text-xs text-slate-500 mb-3.5 leading-relaxed">
-                                    Inserisci i riferimenti aziendali per riservare l'accesso alla tua struttura (entro il 30 settembre 2026).
-                                </p>
-                                <div class="space-y-3 text-xs sm:text-sm">
-                                    <div>
-                                        <label class="block text-slate-600 mb-1 font-medium">Nome della struttura ricettiva *</label>
-                                        <input type="text" id="nome_struttura" placeholder="Es. Grand Hotel Riviera" class="w-full bg-white border border-slate-300 rounded-xl py-3 px-3.5 text-xs sm:text-sm text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]">
-                                    </div>
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                                        <div>
-                                            <label class="block text-slate-600 mb-1 font-medium">Email aziendale / direzione *</label>
-                                            <input type="email" id="email_lead" placeholder="direzione@hotel.it" class="w-full bg-white border border-slate-300 rounded-xl py-3 px-3.5 text-xs sm:text-sm text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]">
-                                        </div>
-                                        <div>
-                                            <label class="block text-slate-600 mb-1 font-medium">Nome e Cognome referente *</label>
-                                            <input type="text" id="nome_referente" placeholder="Mario Rossi" class="w-full bg-white border border-slate-300 rounded-xl py-3 px-3.5 text-xs sm:text-sm text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label class="block text-slate-600 mb-1 font-medium">Telefono (facoltativo per chiarimenti diretti)</label>
-                                        <input type="tel" id="telefono_referente" placeholder="+39 333 1234567" class="w-full bg-white border border-slate-300 rounded-xl py-3 px-3.5 text-xs sm:text-sm text-[#2b2b2b] focus:outline-none focus:border-[#007f3d]">
-                                    </div>
-
-                                    <!-- CHECKBOX PRIVACY OBBLIGATORIO -->
-                                    <div class="pt-2">
-                                        <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-[#007f3d] transition">
-                                            <input type="checkbox" id="privacy_accept" class="mt-0.5 text-[#007f3d] focus:ring-[#007f3d] h-4 w-4 rounded border-slate-300">
-                                            <span class="text-xs text-slate-600 leading-snug">
-                                                Ho letto e accetto l'<button type="button" onclick="openPrivacyModal()" class="text-[#007f3d] font-semibold underline hover:text-[#00522b]">informativa sulla privacy</button> per il trattamento dei dati personali e l'invio del codice univoco di accesso prioritario. *
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pulsanti di Navigazione Form -->
-                        <div class="mt-8 flex flex-row items-center justify-between gap-3 pt-4 border-t border-slate-200">
-                            <button type="button" id="prev-btn" onclick="prevStep()" class="text-xs sm:text-sm font-semibold text-slate-600 hover:text-[#00522b] px-4 py-2.5 rounded-xl transition hidden active:scale-95">
-                                ← Indietro
-                            </button>
-                            <div class="w-full sm:w-auto ml-auto">
-                                <button type="submit" id="next-btn" class="w-full sm:w-auto bg-[#007f3d] hover:bg-[#00522b] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl transition shadow text-center active:scale-98">
-                                    Continua →
-                                </button>
-                            </div>
-                        </div>
-
-                    </form>
-
-                    <!-- Schermata Finale di Ringraziamento con Codice Univoco -->
-                    <div id="thankyou-screen" class="text-center py-8 sm:py-10 space-y-4 hidden">
-                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#007f3d]/10 border border-[#007f3d]/30 text-[#007f3d] rounded-2xl flex items-center justify-center mx-auto shadow-sm">
-                            <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-[#00522b] font-brand">Grazie per il tuo prezioso contributo!</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                            Le tue risposte sono state registrate con successo. Abbiamo riservato per la tua struttura l'accesso prioritario ed esclusivo alla nuova piattaforma SUSTI®.
-                        </p>
-
-                        <!-- BOX CODICE UNIVOCO GENERATO -->
-                        <div class="p-4 sm:p-5 rounded-2xl bg-white border border-emerald-200 max-w-sm mx-auto shadow-sm">
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1.5">
-                                Il tuo codice personale di accesso:
-                            </span>
-                            <div id="display-unique-code" class="font-mono text-xl sm:text-2xl font-black text-[#007f3d] tracking-wider select-all py-1.5 bg-emerald-50 rounded-xl border border-emerald-200">
-                                SUSTI-XXXXXX
-                            </div>
-                            <span class="text-xs text-slate-500 mt-2 block">
-                                Ti abbiamo inviato una conferma con questo codice all'email indicata.
-                            </span>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#37aae1]"></span>
+                            <span>Azioni mirate e ROI concreto</span>
                         </div>
                     </div>
 
@@ -478,15 +226,139 @@
             </div>
         </section>
 
-        <!-- ANTEPRIMA DEL SOFTWARE (ASSESSMENT DIMOSTRATIVO) -->
-        <section class="py-12 sm:py-16 bg-[#f3f6f3] border-b border-slate-200">
+        <!-- LE DIMENSIONI DELLA SOSTENIBILITÀ E I 10 TEMI -->
+        <section class="py-14 sm:py-20 bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-10 sm:mb-14">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Struttura Metodologica</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Le 3 Dimensioni e i 10 Temi di SUSTI®</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
+                        Tutti i verticali SUSTI condividono una struttura comune basata su tre dimensioni e 50 domande, per una lettura chiara e integrata delle prestazioni alberghiere.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- DIMENSIONE AMBIENTALE -->
+                    <div class="rounded-2xl border border-slate-200 bg-[#fcfdfc] p-5 sm:p-6 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-2.5 py-1 rounded-md text-[10.5px] font-bold uppercase tracking-wider bg-[#007f3d]/10 text-[#007f3d]">
+                                    Dimensione
+                                </span>
+                                <span class="text-xs font-bold text-[#007f3d]">4 Temi</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2b2b2b] mb-2 font-brand">Ambientale</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Analizza l'impatto sulle risorse naturali, l'uso efficiente di energia e acqua, la corretta gestione dei rifiuti e la mobilità sostenibile.
+                            </p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-slate-100">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Temi analizzati:</span>
+                            <div class="grid grid-cols-2 gap-1.5 text-xs text-slate-700 font-medium">
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d]"></span>
+                                    <span>Energia</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d]"></span>
+                                    <span>Risparmio Idrico</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d]"></span>
+                                    <span>Rifiuti</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d]"></span>
+                                    <span>Mobilità</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIMENSIONE SOCIALE -->
+                    <div class="rounded-2xl border border-slate-200 bg-[#fcfdfc] p-5 sm:p-6 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-2.5 py-1 rounded-md text-[10.5px] font-bold uppercase tracking-wider bg-[#69a82f]/15 text-[#69a82f]">
+                                    Dimensione
+                                </span>
+                                <span class="text-xs font-bold text-[#69a82f]">3 Temi</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2b2b2b] mb-2 font-brand">Sociale</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Valuta i temi dell'accessibilità e inclusione, la relazione con la comunità locale e la gestione, tutela e valorizzazione dello staff.
+                            </p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-slate-100">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Temi analizzati:</span>
+                            <div class="grid grid-cols-1 gap-1.5 text-xs text-slate-700 font-medium">
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#69a82f]"></span>
+                                    <span>Collaboratori (Tutela & Crescita)</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#69a82f]"></span>
+                                    <span>Comunità Locale</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#69a82f]"></span>
+                                    <span>Inclusione & Accessibilità</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIMENSIONE ECONOMICA -->
+                    <div class="rounded-2xl border border-slate-200 bg-[#fcfdfc] p-5 sm:p-6 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-2.5 py-1 rounded-md text-[10.5px] font-bold uppercase tracking-wider bg-[#37aae1]/15 text-[#37aae1]">
+                                    Dimensione
+                                </span>
+                                <span class="text-xs font-bold text-[#37aae1]">3 Temi</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2b2b2b] mb-2 font-brand">Economica</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Considera il radicamento nel territorio, la filiera di acquisto responsabile e la comunicazione trasparente verso ospiti e portali di prenotazione.
+                            </p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-slate-100">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Temi analizzati:</span>
+                            <div class="grid grid-cols-1 gap-1.5 text-xs text-slate-700 font-medium">
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#37aae1]"></span>
+                                    <span>Territorio & Identità</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#37aae1]"></span>
+                                    <span>Fornitori & Filiera Sostenibile</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 bg-white p-2 rounded-lg border border-slate-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#37aae1]"></span>
+                                    <span>Comunicazione Trasparente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ANTEPRIMA DEL REPORT OPERATIVO (DIMOSTRAZIONE SOFTWARE) -->
+        <section class="py-14 sm:py-20 bg-[#f3f6f3] border-b border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 
                 <div class="text-center mb-8 sm:mb-10">
-                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Dimostrazione</span>
-                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Anteprima dell'assessment: analisi e monitoraggio</h2>
-                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
-                        Ecco come si presenta il Report di valutazione su 50 temi: rating complessivo, confronto con oltre 1.000 strutture dal 2022 e piano operativo prioritario.
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Dimostrazione del Software</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1 font-brand">Anteprima del Report: analisi e piano operativo</h2>
+                    <p class="text-xs text-slate-500 mt-1 max-w-xl mx-auto leading-relaxed">
+                        Ecco come si presenta il Report generato dalla piattaforma: rating complessivo, benchmark nazionale e indicazioni operative prioritarie.
                     </p>
                 </div>
 
@@ -538,7 +410,7 @@
 
                             <div class="lg:col-span-8 flex flex-col items-center w-full">
                                 <div class="w-full h-[250px] sm:h-[280px] relative bg-white rounded-xl">
-                                    <canvas id="sustiRadarChart"></canvas>
+                                    <canvas id="sustiRadarChartHome"></canvas>
                                 </div>
                                 <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-[10.5px] sm:text-[11px] text-slate-600 mt-2 font-medium">
                                     <span class="text-slate-400 font-bold uppercase text-[9.5px]">3 Dimensioni:</span>
@@ -584,93 +456,263 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
-                            <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-4 shadow-sm space-y-2.5">
-                                <div class="flex items-center gap-1.5 font-bold text-[#00522b] font-sans text-xs">
-                                    <svg class="w-4 h-4 text-[#007f3d] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                    <span>Punti di forza rilevati nella struttura (3)</span>
-                                </div>
-                                <ul class="space-y-2 text-slate-700 text-[11.5px] leading-relaxed">
-                                    <li class="flex items-start">
-                                        <span class="text-[#007f3d] font-bold mr-1.5">1.</span>
-                                        <span><strong>Gestione idrica e dei rifiuti consolidata:</strong> buone pratiche e riduzione degli sprechi ben strutturate.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-[#007f3d] font-bold mr-1.5">2.</span>
-                                        <span><strong>Valorizzazione della filiera locale (90%):</strong> enogastronomia a km zero e legame attivo con il territorio.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-[#007f3d] font-bold mr-1.5">3.</span>
-                                        <span><strong>Comunicazione trasparente della sostenibilità (83%):</strong> messaggi chiari verso gli ospiti su sito e materiali.</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 shadow-sm space-y-2.5">
-                                <div class="flex items-center gap-1.5 font-bold text-amber-900 font-sans text-xs">
-                                    <svg class="w-4 h-4 text-amber-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                    <span>Suggerimenti e azioni per tema (3)</span>
-                                </div>
-                                <ul class="space-y-2 text-slate-700 text-[11.5px] leading-relaxed">
-                                    <li class="flex items-start">
-                                        <span class="text-amber-800 font-bold mr-1.5">1.</span>
-                                        <span><strong>Monitorare e raccogliere i dati energetici:</strong> è la causa principale dello scarto; riduce subito i costi vivi in bolletta.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-amber-800 font-bold mr-1.5">2.</span>
-                                        <span><strong>Favorire la mobilità dolce per gli ospiti:</strong> convenzioni per noleggio bici e informazioni sui mezzi pubblici.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-amber-800 font-bold mr-1.5">3.</span>
-                                        <span><strong>Pianificare l'aggiornamento e la formazione del team:</strong> brevi percorsi pratici per il personale di reparto.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3 Punti Chiave Metodologici -->
-        <section class="py-12 sm:py-16 bg-white border-b border-slate-200">
+        <!-- RIGORE SCIENTIFICO, STANDARD E COMITATO -->
+        <section class="py-14 sm:py-20 bg-white border-b border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+                
+                <div class="text-center mb-10">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Affidabilità & Supervisione</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Standard internazionali e rigore scientifico</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto leading-relaxed">
+                        SUSTI® è sviluppato a partire da standard riconosciuti a livello globale per rendere accessibili e applicabili linee guida complesse senza cadere nel greenwashing.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    
                     <div class="bg-[#f3f6f3] p-5 sm:p-6 rounded-2xl border border-slate-200">
-                        <div class="w-10 h-10 rounded-xl bg-[#007f3d]/10 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
-                            01
+                        <div class="w-9 h-9 rounded-xl bg-[#007f3d]/10 text-[#007f3d] flex items-center justify-center mb-3.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Progettato sulla base dei criteri GSTC e ISO 21401</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                            Mappa 50 parametri di sostenibilità: prepara la struttura alla certificazione formale ed evita dichiarazioni fuorvianti.
+                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Base ISO 21401 & GSTC Hotel</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                            Costruito direttamente sui criteri internazionali per la gestione della sostenibilità nelle strutture ricettive, trasformandoli in domande operative quotidiane.
                         </p>
                     </div>
 
                     <div class="bg-[#f3f6f3] p-5 sm:p-6 rounded-2xl border border-slate-200">
-                        <div class="w-10 h-10 rounded-xl bg-[#69a82f]/15 text-[#007f3d] flex items-center justify-center mb-4 font-black text-sm font-sans">
-                            02
+                        <div class="w-9 h-9 rounded-xl bg-[#69a82f]/15 text-[#007f3d] flex items-center justify-center mb-3.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                         </div>
-                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Confronto con oltre 1.000 Hotel</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                            Attivo dal 2022: verifica subito le prestazioni di sostenibilità della tua struttura rispetto alla media reale di oltre 1.000 alberghi italiani già analizzati.
+                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">Comitato Tecnico Scientifico</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                            Metodo supervisionato e validato periodicamente da esperti di settore per garantire aggiornamenti metodologici costanti e dati confrontabili nel tempo.
                         </p>
                     </div>
 
                     <div class="bg-[#f3f6f3] p-5 sm:p-6 rounded-2xl border border-slate-200">
-                        <div class="w-10 h-10 rounded-xl bg-[#37aae1]/15 text-[#37aae1] flex items-center justify-center mb-4 font-black text-sm font-sans">
-                            03
+                        <div class="w-9 h-9 rounded-xl bg-[#37aae1]/15 text-[#37aae1] flex items-center justify-center mb-3.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         </div>
-                        <h3 class="text-base font-bold text-[#2b2b2b] mb-2 font-sans">Visibilità e conformità di mercato</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                            Rispondi con dati oggettivi ai requisiti di trasparenza richiesti dai canali di vendita internazionali e dai viaggiatori attenti alla sostenibilità.
+                        <h3 class="text-sm font-bold text-[#2b2b2b] mb-1.5 font-sans">ISO 17029 & ISO 17033</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                            Costruito in coerenza con i principi di trasparenza e validazione delle asserzioni ambientali, per comunicare all'esterno con prove verificabili.
                         </p>
                     </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- L'ECOSISTEMA SUSTI®: I VERTICALI IN ARRIVO -->
+        <section class="py-12 sm:py-16 bg-[#f3f6f3] border-b border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#007f3d] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+                                Ecosistema in Espansione
+                            </span>
+                            <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-brand mt-2">
+                                Nato per l'hotellerie, progettato per tutta la filiera turistica
+                            </h3>
+                        </div>
+                        <div class="text-xs text-slate-500 md:max-w-xs leading-relaxed">
+                            Oggi il focus è su <strong>SUSTI Hotel</strong>. A breve la piattaforma renderà disponibili i verticali dedicati agli altri comparti del turismo e del territorio:
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-xs">
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI B&B</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">GSTC Hotel adattato</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Appartamenti</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Ospitalità diffusa</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Ristorazione</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Su base ISO 21621</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Rifugi</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Criteri alpini specifici</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Spiagge</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Su base ISO 13009</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Eventi</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Su base ISO 20121</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI Destinazioni</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Criteri GSTC DMO</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#f3f6f3] border border-slate-200/80">
+                            <div class="font-bold text-[#00522b]">SUSTI CSR</div>
+                            <div class="text-[10.5px] text-slate-500 mt-0.5">Su base UNI/PdR 134</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- APPUNTAMENTI FIERISTICI RIMINI -->
+        <section id="eventi-rimini" class="py-12 sm:py-16 bg-[#f3f6f3]">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-8 sm:mb-10">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Incontriamoci di persona</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1 font-brand">Il rilancio ufficiale a Rimini · Ottobre 2026</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto leading-relaxed">
+                        Saremo presenti ai due principali appuntamenti autunnali dell'ospitalità italiana. Vieni a scoprire in anteprima la piattaforma SUSTI® o a ritirare il tuo Report personalizzato.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                    
+                    <!-- BOX HOSPITALITY DAY -->
+                    <div class="bg-white border-2 border-emerald-100 hover:border-[#007f3d] rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm transition group">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-[#007f3d]/10 text-[#007f3d] font-bold text-xs sm:text-sm font-sans">
+                                13 OTTOBRE 2026
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-medium">Palacongressi di Rimini</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-brand group-hover:text-[#00522b] transition">
+                            Hospitality Day 2026
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            L'evento di riferimento per il management alberghiero. Presenteremo in anteprima le funzionalità del nuovo software, con dimostrazioni pratiche di calcolo del rating e generazione automatica del piano operativo.
+                        </p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                            <span class="text-[11px] text-slate-500 font-medium">Incontro con Robert Kropfitsch & il team</span>
+                            <a href="mailto:info@territorisostenibili.it?subject=Incontro%20Hospitality%20Day%20Rimini%202026&body=Gentile%20Team%20di%20Territori%20Sostenibili,%0D%0A%0D%0Adesidero%20fissare%20un%20incontro%20riservato%20durante%20Hospitality%20Day%20(13%20ottobre%202026%20a%20Rimini).%0D%0A%0D%0A-%20Nome%20Struttura:%20%0D%0A-%20Nome%20e%20Cognome%20Referente:%20%0D%0A-%20Ruolo%20(Titolare/Direttore/Altro):%20%0D%0A-%20Telefono:%20%0D%0A-%20Fascia%20oraria%20preferita%20(mattina/pomeriggio):%20%0D%0A%0D%0ACordiali%20saluti" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-[#007f3d] bg-emerald-50 hover:bg-[#007f3d] hover:text-white border border-emerald-200 transition shadow-sm active:scale-95 shrink-0">
+                                <span>Fissa incontro</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BOX TTG TRAVEL EXPERIENCE -->
+                    <div class="bg-white border-2 border-lime-100 hover:border-[#94c11f] rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm transition group">
+                        <div class="flex items-center justify-between gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-[#94c11f]/20 text-[#00522b] font-bold text-xs sm:text-sm font-sans">
+                                14 – 16 OTTOBRE 2026
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-medium">Fiera di Rimini</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-[#2b2b2b] font-brand group-hover:text-[#00522b] transition">
+                            TTG Travel Experience 2026
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            La fiera B2B del turismo in Italia. Tre giornate dedicate all'evoluzione della domanda internazionale, alle nuove normative anti-greenwashing e ai percorsi di certificazione accreditata GSTC e ISO 21401.
+                        </p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                            <span class="text-[11px] text-slate-500 font-medium">Territori Sostenibili Società Benefit</span>
+                            <a href="mailto:info@territorisostenibili.it?subject=Incontro%20TTG%20Rimini%202026&body=Gentile%20Team%20di%20Territori%20Sostenibili,%0D%0A%0D%0Adesidero%20fissare%20un%20incontro%20riservato%20durante%20TTG%20Travel%20Experience%20(14-16%20ottobre%202026%20a%20Rimini).%0D%0A%0D%0A-%20Nome%20Struttura:%20%0D%0A-%20Nome%20e%20Cognome%20Referente:%20%0D%0A-%20Ruolo%20(Titolare/Direttore/Altro):%20%0D%0A-%20Telefono:%20%0D%0A-%20Giorno%20e%20orario%20preferito:%20%0D%0A%0D%0ACordiali%20saluti" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-[#007f3d] bg-emerald-50 hover:bg-[#007f3d] hover:text-white border border-emerald-200 transition shadow-sm active:scale-95 shrink-0">
+                                <span>Fissa incontro</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-slate-500">
+                        Vuoi fissare un appuntamento riservato durante le giornate di fiera? Scrivici direttamente a <a href="mailto:info@territorisostenibili.it?subject=Incontro%20Fiere%20Rimini%202026&body=Gentile%20Team%20di%20Territori%20Sostenibili,%0D%0A%0D%0Avorrei%20fissare%20un%20incontro%20durante%20gli%20eventi%20di%20Rimini.%0D%0A%0D%0A-%20Nome%20Struttura:%20%0D%0A-%20Referente:%20%0D%0A-%20Telefono:%20%0D%0A%0D%0AGrazie." class="text-[#007f3d] font-semibold underline hover:text-[#00522b]">info@territorisostenibili.it</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINALE PRE-FOOTER -->
+        <section class="bg-[#00522b] text-white py-10 sm:py-12 border-t border-emerald-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-white/10 text-[#c6d86b]">
+                    Accesso Riservato ed Esclusivo
+                </span>
+                <h2 class="text-xl sm:text-3xl font-bold font-brand">
+                    Sei un albergatore? Ricevi il tuo codice prima del rilascio ufficiale.
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-200 max-w-xl mx-auto font-light leading-relaxed">
+                    Il sondaggio è attivo fino al 30 settembre 2026: rispondi in 3 minuti e assicurati l'accesso prioritario alla nuova piattaforma SUSTI®.
+                </p>
+                <div class="pt-2">
+                    <a href="/sondaggio" class="inline-flex items-center justify-center px-7 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition active:scale-95">
+                        Inizia il questionario (3 minuti) →
+                    </a>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- FOOTER ISTITUZIONALE -->
+    <footer class="border-t border-slate-200 bg-white py-6 sm:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-5 sm:space-y-6">
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group" title="Territori Sostenibili Società Benefit">
+                    <img 
+                        src="Territori Sostenibili.png" 
+                        alt="Territori Sostenibili Società Benefit" 
+                        class="h-10 w-auto object-contain" 
+                        onerror="if(!this.dataset.triedCase){ this.dataset.triedCase='1'; this.src='./Territori Sostenibili.png'; } else if(this.dataset.triedCase==='1'){ this.dataset.triedCase='2'; this.src='territori-sostenibili.png'; } else if(this.dataset.triedCase==='2'){ this.dataset.triedCase='3'; this.src='../Territori Sostenibili.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }" 
+                    />
+                    <div class="items-center gap-2.5 hidden">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 45 L25 15 L40 38" stroke="#a06334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 45 C15 32 28 18 36 28 C37 38 27 46 22 45 Z" fill="#007f3d"/>
+                            <path d="M23 44 C28 36 32 30 35 29" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M36 32 C32 18 45 6 52 16 C53 26 43 34 36 32 Z" fill="#94c11f"/>
+                            <path d="M37 31 C42 24 47 18 51 17" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M42 42 C42 30 58 26 62 36 C60 45 48 48 42 42 Z" fill="#69a82f"/>
+                            <path d="M43 41 C50 38 56 34 61 36" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                            <path d="M12 56 C28 50 48 54 65 52 C52 57 32 58 12 56 Z" fill="#1a8ad4"/>
+                            <path d="M18 60 C32 56 50 58 68 56" stroke="#37aae1" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex flex-col text-left">
+                            <span class="font-extrabold text-[#007f3d] text-base leading-none tracking-tight">territori</span>
+                            <span class="font-extrabold text-[#1a8ad4] text-base leading-none tracking-tight">sostenibili</span>
+                            <span class="text-[9.5px] font-medium text-slate-700 tracking-wider uppercase mt-0.5">Società Benefit</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="text-center md:text-right text-xs text-slate-500">
+                    <div>Standard scientifici di riferimento: <strong class="text-slate-700">ISO 21401</strong> · <strong class="text-slate-700">GSTC Hotel</strong> · <strong class="text-slate-700">ISO 17029 / ISO 17033</strong></div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Supervisione del Comitato Tecnico Scientifico · Territori Sostenibili Società Benefit</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 pt-2 border-t border-slate-100">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <span>SUSTI® – Sustainable Tourism Index</span>
+                    <span>·</span>
+                    <a href="/sondaggio" class="text-[#007f3d] hover:underline font-medium">Sondaggio Decisori Hotel</a>
+                    <span>·</span>
+                    <a href="mailto:info@territorisostenibili.it" class="text-slate-600 hover:text-[#007f3d] underline">info@territorisostenibili.it</a>
+                    <span>·</span>
+                    <button type="button" onclick="openPrivacyModal()" class="hover:text-[#007f3d] underline">Informativa Privacy</button>
+                </div>
+                <div>
+                    <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 hover:text-[#007f3d]">Territori Sostenibili Srl Società Benefit</a> – P.I. 08449100968 · © 2026
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- FINESTRA MODALE INFORMATIVA PRIVACY -->
     <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
@@ -681,7 +723,7 @@
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
-            <div class="p-4 sm:p-6 overflow-y-auto space-y-3.5 text-xs text-slate-600 leading-relaxed">
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-3.5 text-xs text-slate-600 leading-relaxed text-left">
                 <p>Ai sensi del Regolamento (UE) 2016/679 ("GDPR") e della normativa nazionale vigente, ti informiamo su come saranno trattati i dati personali forniti nell'ambito del sondaggio.</p>
                 
                 <div>
@@ -733,106 +775,7 @@
         </div>
     </div>
 
-    <footer class="border-t border-slate-200 bg-white py-6 sm:py-8">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-5 sm:space-y-6">
-            
-            <div class="bg-[#f3f6f3] border border-slate-200 rounded-2xl p-4 sm:p-5">
-                <div class="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#007f3d] mb-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d] animate-pulse"></span>
-                    Incontriamoci di persona a Rimini
-                </div>
-                <div class="text-xs text-slate-600 mb-3">
-                    Vuoi approfondire l'indice SUSTI® o vedere una dimostrazione dal vivo? Saremo presenti ai principali appuntamenti di ottobre:
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-center space-x-3 shadow-sm">
-                        <div class="px-2.5 py-1.5 rounded-lg bg-[#007f3d]/10 text-[#007f3d] flex items-center justify-center font-bold text-xs shrink-0 font-sans whitespace-nowrap">
-                            13 OTT
-                        </div>
-                        <div class="text-xs">
-                            <div class="font-bold text-[#2b2b2b] font-sans">Hospitality Day 2026</div>
-                            <div class="text-[11px] text-slate-500">Palacongressi di Rimini</div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-center space-x-3 shadow-sm">
-                        <div class="px-2.5 py-1.5 rounded-lg bg-[#94c11f]/20 text-[#00522b] flex items-center justify-center font-bold text-xs shrink-0 font-sans whitespace-nowrap">
-                            14-16 OTT
-                        </div>
-                        <div class="text-xs">
-                            <div class="font-bold text-[#2b2b2b] font-sans">TTG Travel Experience 2026</div>
-                            <div class="text-[11px] text-slate-500">Fiera di Rimini</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-4 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
-                <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 group" title="Territori Sostenibili Società Benefit">
-                    <img 
-                        src="/Territori Sostenibili.png" 
-                        alt="Territori Sostenibili Società Benefit" 
-                        class="h-10 w-auto object-contain" 
-                        onerror="if(!this.dataset.triedCase){ this.dataset.triedCase='1'; this.src='../Territori Sostenibili.png'; } else if(this.dataset.triedCase==='1'){ this.dataset.triedCase='2'; this.src='territori-sostenibili.png'; } else if(this.dataset.triedCase==='2'){ this.dataset.triedCase='3'; this.src='../territori-sostenibili.png'; } else { this.style.display='none'; this.nextElementSibling.style.display='flex'; }" 
-                    />
-                    <div class="items-center gap-2.5 hidden">
-                        <svg class="h-10 w-auto" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 45 L25 15 L40 38" stroke="#a06334" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 45 C15 32 28 18 36 28 C37 38 27 46 22 45 Z" fill="#007f3d"/>
-                            <path d="M23 44 C28 36 32 30 35 29" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
-                            <path d="M36 32 C32 18 45 6 52 16 C53 26 43 34 36 32 Z" fill="#94c11f"/>
-                            <path d="M37 31 C42 24 47 18 51 17" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
-                            <path d="M42 42 C42 30 58 26 62 36 C60 45 48 48 42 42 Z" fill="#69a82f"/>
-                            <path d="M43 41 C50 38 56 34 61 36" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
-                            <path d="M12 56 C28 50 48 54 65 52 C52 57 32 58 12 56 Z" fill="#1a8ad4"/>
-                            <path d="M18 60 C32 56 50 58 68 56" stroke="#37aae1" stroke-width="1.8" stroke-linecap="round"/>
-                        </svg>
-                        <div class="flex flex-col text-left">
-                            <span class="font-extrabold text-[#007f3d] text-base leading-none tracking-tight">territori</span>
-                            <span class="font-extrabold text-[#1a8ad4] text-base leading-none tracking-tight">sostenibili</span>
-                            <span class="text-[9.5px] font-medium text-slate-700 tracking-wider uppercase mt-0.5">Società Benefit</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <div class="text-center md:text-right text-xs text-slate-500">
-                    <div>Standard di riferimento: <strong class="text-slate-700">GSTC Industry</strong> · <strong class="text-slate-700">ISO 21401</strong> · <strong class="text-slate-700">ISO 17033</strong></div>
-                    <div class="text-[11px] text-slate-400 mt-0.5">Metodologia di misurazione e confronto per l'ospitalità responsabile</div>
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 pt-2">
-                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                    <span>I tuoi dati restano riservati</span>
-                    <span>·</span>
-                    <a href="mailto:info@territorisostenibili.it" class="text-[#007f3d] hover:underline font-medium">info@territorisostenibili.it</a>
-                    <span>·</span>
-                    <button type="button" onclick="openPrivacyModal()" class="hover:text-[#007f3d] underline">Informativa Privacy</button>
-                </div>
-            </div>
-            
-            <div class="text-center sm:text-left text-[11px] text-slate-400 border-t border-slate-100 pt-3">
-                <a href="http://territorisostenibili.it/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-600 hover:text-[#007f3d]">Territori Sostenibili Srl Società Benefit</a> – P.I. 08449100968 – SDI 5RUO82D · Copyright © 2026
-            </div>
-        </div>
-    </footer>
-
     <script>
-        let currentStep = 1;
-        const totalSteps = 5;
-
-        const GOOGLE_SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyibwgqkcnXX5UaIpR4v2rZl607mw8wFAcAQTNx5gThtvxg7eSsDOK6M5AX6u9_3E26MA/exec";
-
-        function generateUniqueAccessCode() {
-            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-            let randomPart = '';
-            for (let i = 0; i < 6; i++) {
-                randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return 'SUSTI-' + randomPart;
-        }
-
         function openPrivacyModal() {
             document.getElementById('privacy-modal').classList.remove('hidden');
         }
@@ -841,177 +784,8 @@
             document.getElementById('privacy-modal').classList.add('hidden');
         }
 
-        function showError(msg) {
-            const errorBox = document.getElementById('form-error');
-            const errorMsg = document.getElementById('form-error-msg');
-            errorMsg.innerText = msg;
-            errorBox.classList.remove('hidden');
-        }
-
-        function clearError() {
-            document.getElementById('form-error').classList.add('hidden');
-        }
-
-        function updateStepUI() {
-            clearError();
-
-            for (let i = 1; i <= totalSteps; i++) {
-                const stepEl = document.getElementById('step-' + i);
-                if (stepEl) {
-                    stepEl.classList.toggle('hidden', currentStep !== i);
-                }
-            }
-            
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            
-            prevBtn.classList.toggle('hidden', currentStep === 1);
-            
-            if (currentStep === totalSteps) {
-                nextBtn.innerText = 'Invia e genera codice di accesso';
-                nextBtn.className = 'w-full sm:w-auto bg-[#007f3d] hover:bg-[#00522b] text-white text-xs sm:text-sm font-bold px-5 py-2.5 sm:py-2 rounded-lg transition shadow flex items-center justify-center gap-2 active:scale-98';
-            } else {
-                nextBtn.innerText = 'Continua →';
-                nextBtn.className = 'w-full sm:w-auto bg-[#007f3d] hover:bg-[#00522b] text-white text-xs sm:text-sm font-bold px-5 py-2.5 sm:py-2 rounded-lg transition shadow active:scale-98';
-            }
-
-            const stepLabels = [
-                'Passo 1 di 5: Profilo del referente',
-                'Passo 2 di 5: Raccolta dati e sostenibilità attuale',
-                'Passo 3 di 5: Valutazione economica e autonomia',
-                'Passo 4 di 5: Certificazioni accreditate e attestato',
-                'Passo 5 di 5: Invio e codice di accesso prioritario'
-            ];
-            
-            document.getElementById('step-indicator').innerText = stepLabels[currentStep - 1];
-            const percent = Math.round((currentStep / totalSteps) * 100);
-            document.getElementById('step-progress-percent').innerText = percent + '%';
-            document.getElementById('progress-bar').style.width = percent + '%';
-        }
-
-        function validateCurrentStep() {
-            if (currentStep === 1) {
-                const ruolo = document.querySelector('input[name="ruolo"]:checked');
-                if (!ruolo) { showError('Seleziona il tuo ruolo nella struttura.'); return false; }
-            } else if (currentStep === 2) {
-                const awareness = document.querySelector('input[name="awareness"]:checked');
-                const utilita = document.querySelector('input[name="utilita_percepita"]:checked');
-
-                if (!awareness) { showError('Seleziona la frase che descrive il tuo approccio alla sostenibilità.'); return false; }
-                if (!utilita) { showError('Indica quanto riterresti utile lo strumento.'); return false; }
-            } else if (currentStep === 3) {
-                const fasciaPrezzo = document.querySelector('input[name="fascia_prezzo_assessment"]:checked');
-                const upsellSelfService = document.querySelector('input[name="upsell_self_service"]:checked');
-
-                if (!fasciaPrezzo) { showError('Seleziona una fascia di spesa ritenuta corretta.'); return false; }
-                if (!upsellSelfService) { showError('Indica quale strumento aiuterebbe di più il tuo team.'); return false; }
-            } else if (currentStep === 4) {
-                const approccioCert = document.querySelector('input[name="approccio_certificazione"]:checked');
-                const valore = document.querySelector('input[name="valore_attestato"]:checked');
-                const fascia = document.querySelector('input[name="fascia_attestato"]:checked');
-
-                if (!approccioCert) { showError('Seleziona l\'approccio più adatto per il percorso di certificazione.'); return false; }
-                if (!valore) { showError('Indica il valore dell\'attestato.'); return false; }
-                if (!fascia) { showError('Seleziona una fascia di quota annuale per mantenere la validità dell\'attestato.'); return false; }
-            } else if (currentStep === 5) {
-                const struttura = document.getElementById('nome_struttura').value.trim();
-                const email = document.getElementById('email_lead').value.trim();
-                const referente = document.getElementById('nome_referente').value.trim();
-                const privacy = document.getElementById('privacy_accept').checked;
-
-                if (!struttura) { showError('Inserisci il nome della struttura ricettiva.'); return false; }
-                if (!email || !email.includes('@') || !email.includes('.')) { showError('Inserisci un\'email aziendale valida.'); return false; }
-                if (!referente) { showError('Inserisci il nome del referente.'); return false; }
-                if (!privacy) { showError('È necessario accettare l\'informativa privacy per ricevere il codice univoco.'); return false; }
-            }
-            return true;
-        }
-
-        async function submitSurveyData() {
-            const nextBtn = document.getElementById('next-btn');
-            const prevBtn = document.getElementById('prev-btn');
-            
-            nextBtn.disabled = true;
-            prevBtn.classList.add('hidden');
-            nextBtn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Generazione codice in corso...
-            `;
-
-            const uniqueCode = generateUniqueAccessCode();
-
-            const payload = {
-                codice_univoco: uniqueCode,
-                ruolo: document.querySelector('input[name="ruolo"]:checked')?.value || '',
-                awareness: document.querySelector('input[name="awareness"]:checked')?.value || '',
-                utilita_percepita: document.querySelector('input[name="utilita_percepita"]:checked')?.value || '',
-                fascia_prezzo_assessment: document.querySelector('input[name="fascia_prezzo_assessment"]:checked')?.value || '',
-                upsell_self_service: document.querySelector('input[name="upsell_self_service"]:checked')?.value || '',
-                approccio_certificazione: document.querySelector('input[name="approccio_certificazione"]:checked')?.value || '',
-                valore_attestato: document.querySelector('input[name="valore_attestato"]:checked')?.value || '',
-                fascia_attestato: document.querySelector('input[name="fascia_attestato"]:checked')?.value || '',
-                principale_ostacolo: document.getElementById('principale_ostacolo').value.trim(),
-                nome_struttura: document.getElementById('nome_struttura').value.trim(),
-                email_lead: document.getElementById('email_lead').value.trim(),
-                nome_referente: document.getElementById('nome_referente').value.trim(),
-                telefono_referente: document.getElementById('telefono_referente').value.trim(),
-                privacy_accettata: true,
-                data_compilazione: new Date().toISOString()
-            };
-
-            if (GOOGLE_SHEET_WEBAPP_URL && GOOGLE_SHEET_WEBAPP_URL.trim() !== "") {
-                try {
-                    await fetch(GOOGLE_SHEET_WEBAPP_URL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                } catch (e) {
-                    console.warn("Dati registrati.");
-                }
-            }
-
-            document.getElementById('validationForm').classList.add('hidden');
-            document.getElementById('progress-container').classList.add('hidden');
-            document.getElementById('display-unique-code').innerText = uniqueCode;
-            document.getElementById('thankyou-screen').classList.remove('hidden');
-            
-            const formSection = document.getElementById('consultazione-form');
-            if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        function nextStep() {
-            if (!validateCurrentStep()) return;
-
-            if (currentStep < totalSteps) {
-                currentStep++;
-                updateStepUI();
-                const formSection = document.getElementById('consultazione-form');
-                if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                submitSurveyData();
-            }
-        }
-
-        function prevStep() {
-            if (currentStep > 1) {
-                currentStep--;
-                updateStepUI();
-                const formSection = document.getElementById('consultazione-form');
-                if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
-            updateStepUI();
-
-            const radarCanvas = document.getElementById('sustiRadarChart');
+            const radarCanvas = document.getElementById('sustiRadarChartHome');
             if (radarCanvas) {
                 const isMobile = window.innerWidth < 640;
                 new Chart(radarCanvas.getContext('2d'), {
