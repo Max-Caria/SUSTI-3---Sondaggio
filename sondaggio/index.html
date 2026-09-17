@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
     <title>Indagine Sostenibilità Alberghiera 2026 | SUSTI® – Sustainable Tourism Index</title>
+
+    <!-- METATAG OPEN GRAPH & TWITTER PER ANTEPRIMA AUTOMATICA SOCIAL (WHATSAPP, LINKEDIN, FACEBOOK) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://susti.it/sondaggio">
+    <meta property="og:title" content="SUSTI® Hotel – Partecipa alla consultazione riservata (3 min)">
+    <meta property="og:description" content="Condividi le priorità del tuo hotel: ricevi il codice personale per accedere alla valutazione completa gratuita e al benchmark nazionale su oltre 1.000 strutture.">
+    <meta property="og:image" content="https://susti.it/susti-social-orizzontale-1200x627.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="SUSTI® – Sustainable Tourism Index">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SUSTI® Hotel – Sondaggio Decisori Hospitality 2026">
+    <meta name="twitter:description" content="Dalla teoria alla gestione reale: 10 risposte per calibrare il metodo sui reali costi e consumi in hotel. Accesso prioritario gratuito.">
+    <meta name="twitter:image" content="https://susti.it/susti-social-orizzontale-1200x627.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,10 +90,11 @@
 </head>
 <body class="font-sans antialiased selection:bg-[#94c11f] selection:text-[#00522b] min-h-screen flex flex-col justify-between">
 
+    <!-- HEADER DI NAVIGAZIONE -->
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2">
             <div class="flex items-center gap-2.5 sm:gap-4 shrink-0">
-                <a href="#" class="inline-flex items-center group shrink-0" title="SUSTI® — Sustainable Tourism Index">
+                <a href="/" class="inline-flex items-center group shrink-0" title="SUSTI® — Sustainable Tourism Index">
                     <img 
                         src="/susti-lockup-claim-lime.svg" 
                         alt="SUSTI® — Sustainable Tourism Index" 
@@ -633,7 +650,7 @@
             </div>
         </section>
 
-        <!-- 3 Punti Chiave Metodologici -->
+        <!-- 3 PUNTI CHIAVE METODOLOGICI -->
         <section class="py-12 sm:py-16 bg-white border-b border-slate-200">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
@@ -670,6 +687,122 @@
             </div>
         </section>
 
+        <!-- SEZIONE FAQ (DOMANDE FREQUENTI) -->
+        <section id="faq" class="py-14 sm:py-20 bg-[#f3f6f3] border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 sm:mb-14">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Chiarezza e Standard</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">Domande Frequenti su SUSTI®</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
+                        Tutto quello che c'è da sapere su valore, conformità anti-greenwashing, norme internazionali e funzionamento del programma.
+                    </p>
+                </div>
+
+                <div class="space-y-3.5">
+                    
+                    <!-- FAQ 1 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(1)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Perché SUSTI è utile a un ospite o turista?</span>
+                            <span id="faq-icon-1" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-1" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            L'attestazione SUSTI è per l'ospite un segnale di qualità e responsabilità verificabile. A differenza di autocertificazioni generiche, SUSTI si basa su criteri oggettivi e standard riconosciuti a livello internazionale. Scegliere una struttura con attestazione SUSTI significa scegliere un'impresa che ha misurato concretamente il proprio impatto ambientale e sociale e si è impegnata in un percorso continuo di miglioramento.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(2)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">SUSTI è un marchio registrato?</span>
+                            <span id="faq-icon-2" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-2" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            Sì. SUSTI è un marchio protetto di proprietà di Territori Sostenibili Società Benefit, registrato presso il Ministero per le imprese e il Made in Italy. Il marchio è concepito come strumento collettivo: tutte le imprese che aderiscono al programma e ottengono l'attestazione sono autorizzate a utilizzarlo nelle loro comunicazioni commerciali, nel rispetto delle linee guida d'uso definite da Territori Sostenibili.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(3)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">SUSTI è conforme alle normative contro il greenwashing?</span>
+                            <span id="faq-icon-3" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-3" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            Sì. SUSTI rilascia un claim di sostenibilità conforme alle regole in materia di accreditamento internazionale e alle disposizioni europee anti-greenwashing. È stato aggiornato per essere pienamente conforme al Decreto legislativo 30 del 2026 (recepimento della Direttiva UE 2024/825 – EmpCo), in vigore dal 27 settembre 2026, che vieta le asserzioni ambientali generiche, non verificate e non basate su standard riconosciuti. I claim rilasciati attraverso SUSTI sono fondati su criteri misurabili e standard internazionali riconosciuti, e sono accompagnati da un disclaimer redatto secondo le prescrizioni normative.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(4)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Perché SUSTI è utile alle associazioni, consorzi e DMO?</span>
+                            <span id="faq-icon-4" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-4" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI è uno strumento pensato anche per le associazioni del settore e le destinazioni che vogliono sviluppare progetti di sostenibilità territoriale. Per i soggetti collettivi (consorzi turistici, APT, DMO, associazioni di categoria), rappresenta lo strumento di governance della sostenibilità a scala territoriale. Attraverso il programma SUSTI, le destinazioni possono comunicare un'asserzione di sostenibilità verificabile e basata su standard riconosciuti. La piattaforma IT permette di valutare e monitorare il livello di sostenibilità degli operatori in modo omogeneo e comparabile, costruire benchmark di filiera, valorizzare collettivamente l'offerta turistica sostenibile del territorio e supportare i soci nel percorso verso certificazioni di terza parte (GSTC-D, ISO 21401).
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(5)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Chi sono i destinatari di SUSTI? A chi porta valore?</span>
+                            <span id="faq-icon-5" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-5" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI è progettato per creare valore a più livelli: imprese turistiche (hotel, B&amp;B, campeggi, agriturismi, cantine) che vogliono misurare e comunicare la propria sostenibilità; DMO, APT e consorzi che vogliono qualificare l'offerta del territorio; ospiti e turisti che cercano scelte di viaggio consapevoli; istituti finanziatori e partner commerciali che valutano il profilo ESG delle imprese secondo le best practice del settore credito; pubbliche amministrazioni che programmano politiche di turismo sostenibile.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(6)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Quali sono le norme di riferimento su cui si basa SUSTI?</span>
+                            <span id="faq-icon-6" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-6" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI è un programma internazionale per il turismo sostenibile e responsabile, basato sui principali standard internazionali per qualità, sostenibilità e tutela del consumatore, tra cui GSTC Criteria, ISO 21401, ISO 20121, ISO 21621, ISO 13009, GSTC Destinazioni e UNI PdR 134. Il modello integra, inoltre, la terminologia del Comitato Tecnico ISO TC 228, garantendo criteri riconosciuti a livello globale. Questo approccio supporta le imprese nel miglioramento continuo delle performance ambientali, sociali ed economiche.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(7)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Perché SUSTI è utile a un'impresa turistica?</span>
+                            <span id="faq-icon-7" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-7" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI offre alle imprese turistiche un percorso strutturato per misurare, migliorare e comunicare le proprie performance di sostenibilità. I benefici concreti includono: un report dettagliato per orientare le azioni di miglioramento, un attestato riconoscibile da esporre fisicamente e digitalmente, la conformità alle nuove normative anti-greenwashing (Decreto legislativo 30 del 2026), un posizionamento più competitivo verso turisti sensibili alla sostenibilità, e l'accesso semplificato a certificazioni di terza parte (per esempio GSTC o ISO 21401).
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(8)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Come funziona SUSTI?</span>
+                            <span id="faq-icon-8" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-8" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI è un programma di conformità basato sulle principali norme internazionali per la qualità e sostenibilità nel turismo. Attraverso una piattaforma IT dedicata, l'impresa turistica compila online uno strumento di diagnosi strutturato in tre dimensioni e 10 temi, dichiara la propria conformità a ciascun criterio e riceve un punteggio (rating). La piattaforma garantisce il confronto con i benchmark di settore (unica a farlo) e ovviamente la massima tutela delle informazioni. Se il punteggio medio supera la soglia minima, l'impresa può richiedere (a pagamento) l'attestazione di conformità SUSTI e un report di valutazione dettagliato con indicazioni di miglioramento.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 9 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden transition bg-white shadow-sm">
+                        <button type="button" onclick="toggleFaq(9)" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition">
+                            <span class="font-bold text-sm sm:text-base text-[#00522b] font-sans">Cosa è SUSTI? È una certificazione?</span>
+                            <span id="faq-icon-9" class="w-6 h-6 rounded-full bg-emerald-50 text-[#007f3d] flex items-center justify-center shrink-0 text-sm font-bold transition-transform duration-200">+</span>
+                        </button>
+                        <div id="faq-ans-9" class="hidden px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                            SUSTI è un sistema di rating della sostenibilità che rilascia un'attestazione di conformità, non una certificazione classica “passa o non passa”. La distinzione è importante: l'impresa dichiara e documenta la propria conformità ai criteri SUSTI e riceve un punteggio (rating) che misura il livello di sostenibilità raggiunto. In caso di necessità, Territori Sostenibili può attivare un team di auditor per richiedere evidenze e verificare le dichiarazioni. È bene chiarire che nessun rating (compresi quelli ESG) è una certificazione standard: secondo le regole internazionali i rating sono definiti "opinioni di verifica" perché il soggetto indipendente e terzo esprime un giudizio specifico e oggettivo non su un “protocollo”, ma su una situazione specifica dell'organizzazione.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FINESTRA MODALE INFORMATIVA PRIVACY -->
@@ -681,7 +814,7 @@
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
-            <div class="p-4 sm:p-6 overflow-y-auto space-y-3.5 text-xs text-slate-600 leading-relaxed">
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-3.5 text-xs text-slate-600 leading-relaxed text-left">
                 <p>Ai sensi del Regolamento (UE) 2016/679 ("GDPR") e della normativa nazionale vigente, ti informiamo su come saranno trattati i dati personali forniti nell'ambito del sondaggio.</p>
                 
                 <div>
@@ -733,6 +866,7 @@
         </div>
     </div>
 
+    <!-- FOOTER ISTITUZIONALE -->
     <footer class="border-t border-slate-200 bg-white py-6 sm:py-8">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-5 sm:space-y-6">
             
@@ -818,6 +952,7 @@
         </div>
     </footer>
 
+    <!-- LOGICA JAVASCRIPT: FORM A 5 PASSI, CHART.JS RADAR, FAQ E MODALE PRIVACY -->
     <script>
         let currentStep = 1;
         const totalSteps = 5;
