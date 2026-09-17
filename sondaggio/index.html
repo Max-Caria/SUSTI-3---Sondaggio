@@ -841,6 +841,17 @@
             document.getElementById('privacy-modal').classList.add('hidden');
         }
 
+        function toggleFaq(index) {
+            const ans = document.getElementById('faq-ans-' + index);
+            const icon = document.getElementById('faq-icon-' + index);
+            if (!ans || !icon) return;
+
+            const isHidden = ans.classList.contains('hidden');
+            ans.classList.toggle('hidden', !isHidden);
+            icon.innerText = isHidden ? '−' : '+';
+            icon.classList.toggle('rotate-180', isHidden);
+        }
+
         function showError(msg) {
             const errorBox = document.getElementById('form-error');
             const errorMsg = document.getElementById('form-error-msg');
