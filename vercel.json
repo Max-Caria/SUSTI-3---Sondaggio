@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/greenwashing", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false },
+    { "source": "/Greenwashing", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false }
+  ]
+}
