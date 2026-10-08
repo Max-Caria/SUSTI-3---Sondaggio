@@ -3,6 +3,10 @@
     { "source": "/greenwashing", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false },
     { "source": "/greenwashing/", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false },
     { "source": "/Greenwashing", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false },
-    { "source": "/Greenwashing/", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false }
+    { "source": "/Greenwashing/", "destination": "https://app.susti.it/greenwashing?t=flyer-url", "permanent": false },
+    { "source": "/assessment", "destination": "https://app.susti.it/assessment?t=sito", "permanent": false },
+    { "source": "/assessment/", "destination": "https://app.susti.it/assessment?t=sito", "permanent": false },
+    { "source": "/Assessment", "destination": "https://app.susti.it/assessment?t=sito", "permanent": false },
+    { "source": "/Assessment/", "destination": "https://app.susti.it/assessment?t=sito", "permanent": false }
   ]
 }
