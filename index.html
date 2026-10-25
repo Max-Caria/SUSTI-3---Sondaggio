@@ -42,9 +42,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Michroma&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TAILWIND PLAY CDN WITH COOKIECONSENT IGNORE TO PREVENT DELAYED COMPILATION -->
+    <script src="https://cdn.tailwindcss.com" data-cookieconsent="ignore"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
+    <script data-cookieconsent="ignore">
         tailwind.config = {
             theme: {
                 extend: {
@@ -69,18 +70,52 @@
         }
     </script>
     <style>
+        /* CRITICAL BASELINE STYLES (Zero-FOUC: Prevents 1s layout shift & oversized SVG logo before Tailwind compiles) */
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            margin: 0;
+            background-color: #f3f6f3;
+            color: #2b2b2b;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .header-logo {
+            height: 32px !important;
+            max-height: 36px !important;
+            width: auto !important;
+            max-width: 210px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-section {
+            background-color: #00522b;
+            color: #ffffff;
+        }
+
         @font-face {
             font-family: 'Eurostile';
             src: local('Eurostile LT Pro Unicode Bold'), local('Eurostile LT Pro Bold'), local('Eurostile Bold'), local('Eurostile');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
-        }
-
-        body {
-            background-color: #f3f6f3;
-            color: #2b2b2b;
-            font-family: 'Inter', sans-serif;
         }
 
         .font-brand {
@@ -103,7 +138,9 @@
                     <img 
                         src="susti-lockup-claim-lime.svg" 
                         alt="SUSTI® — Sustainable Tourism Index" 
-                        class="h-7 sm:h-9 w-auto max-w-[170px] sm:max-w-[220px] object-contain select-none" 
+                        width="210"
+                        height="36"
+                        class="header-logo h-7 sm:h-9 w-auto max-w-[170px] sm:max-w-[220px] object-contain select-none" 
                         onerror="if(!this.dataset.tried){ this.dataset.tried='1'; this.src='./susti-lockup-claim-lime.svg'; } else if(this.dataset.tried==='1'){ this.dataset.tried='2'; this.src='assets/susti-lockup-claim-lime.svg'; }" 
                     />
                 </a>
@@ -115,13 +152,13 @@
                 </div>
             </div>
             
-            <div class="flex items-center gap-2.5 shrink-0">
-                <span class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-50 text-[#007f3d] border border-emerald-200">
-                    <span class="w-2 h-2 rounded-full bg-[#007f3d] animate-pulse"></span>
-                    Standard ISO 21401 &amp; GSTC Hotel
-                </span>
-                <a href="mailto:info@territorisostenibili.it?subject=Richiesta%20Informazioni%20SUSTI%20Hotel" class="text-[11px] sm:text-xs font-semibold px-3.5 sm:px-4 py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap active:scale-95 flex items-center gap-1.5">
-                    <span>Richiedi informazioni</span>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="https://app.susti.it/greenwashing" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 hover:text-[#007f3d] transition px-2.5 py-1.5 rounded-lg hover:bg-slate-100">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                    <span>Smart Check (3 min)</span>
+                </a>
+                <a href="https://app.susti.it/assessment" target="_blank" rel="noopener noreferrer" class="text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-2 rounded-lg bg-[#007f3d] hover:bg-[#00522b] text-white transition shadow-sm whitespace-nowrap active:scale-95 flex items-center gap-1.5">
+                    <span>Assessment Hotel</span>
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
             </div>
@@ -130,7 +167,7 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="relative bg-[#00522b] text-white pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20 overflow-hidden border-b border-emerald-900">
+        <section class="hero-section relative bg-[#00522b] text-white pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20 overflow-hidden border-b border-emerald-900">
             <div class="absolute inset-0 -z-10 opacity-20">
                 <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#94c11f] blur-[150px] rounded-full"></div>
             </div>
@@ -150,15 +187,120 @@
                 </p>
 
                 <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-                    <a href="#come-funziona" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition-all active:scale-98">
-                        Scopri il metodo
+                    <a href="#strumenti-operativi" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition-all active:scale-98">
+                        Accedi agli strumenti operativi
                         <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
-                    <a href="mailto:info@territorisostenibili.it?subject=Richiesta%20Informazioni%20SUSTI%20Hotel" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition-all">
-                        Contattaci
+                    <a href="#come-funziona" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition-all">
+                        Scopri il metodo
                         <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE STRUMENTI DIGITALI SUSTI®: SMART CHECK & ASSESSMENT -->
+        <section id="strumenti-operativi" class="py-12 sm:py-16 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center mb-10 sm:mb-12">
+                    <span class="text-[11px] sm:text-xs font-bold text-[#007f3d] uppercase tracking-widest">Piattaforma Digitale SUSTI®</span>
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#2b2b2b] mt-1.5 font-brand">I due strumenti operativi per il tuo hotel</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-xl mx-auto leading-relaxed">
+                        Dalla verifica rapida dei claim ambientali al piano diagnostico completo: scegli lo strumento più adatto alla fase attuale della tua struttura.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                    
+                    <!-- BOX 1: GREENWASHING SMART CHECK -->
+                    <div class="rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50/40 via-white to-white p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                                    D.Lgs. 30/2026 · Direttiva UE 2024/825
+                                </span>
+                                <span class="text-xs font-extrabold text-amber-800 font-mono">100% Gratuito</span>
+                            </div>
+
+                            <h3 class="text-xl sm:text-2xl font-bold text-[#2b2b2b] mb-2 font-brand">
+                                Greenwashing Smart Check
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+                                La comunicazione ambientale del tuo hotel regge alle nuove normative in vigore dal 27 settembre 2026? Verifica in 3 minuti se i tuoi claim commerciali espongono a sanzioni o contestazioni da parte dei consumatori.
+                            </p>
+
+                            <div class="space-y-2.5 pt-2 border-t border-amber-100 mb-6 text-xs text-slate-700">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">⏱</div>
+                                    <span><strong>10 domande a risposta chiusa:</strong> compilazione immediata da smartphone o tablet senza raccogliere documenti o bollette.</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">🚦</div>
+                                    <span><strong>Semaforo del rischio istantaneo:</strong> Basso (8–10), Medio (5–7) o Alto (&lt;5) per identificare subito le aree critiche.</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">🛡</div>
+                                    <span><strong>Conformità ISO 17033:2020:</strong> indicazioni pratiche per allineare testi su sito web, portali di prenotazione e brochure.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100">
+                            <a href="https://app.susti.it/greenwashing" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-amber-950 bg-amber-300 hover:bg-amber-400 border border-amber-400 shadow transition active:scale-98">
+                                <span>Esegui lo Smart Check gratuito (3 min)</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <div class="text-[10.5px] text-center text-slate-400 font-mono mt-2">Accesso immediato su app.susti.it/greenwashing</div>
+                        </div>
+                    </div>
+
+                    <!-- BOX 2: SUSTI ASSESSMENT COMPLETO -->
+                    <div class="rounded-3xl border-2 border-emerald-300 bg-gradient-to-b from-emerald-50/40 via-white to-white p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-bold uppercase tracking-wider bg-emerald-100 text-[#00522b] border border-emerald-300">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#007f3d] animate-pulse"></span>
+                                    Standard GSTC Hotel &amp; ISO 21401
+                                </span>
+                                <span class="text-xs font-extrabold text-[#007f3d] font-mono">50 Parametri</span>
+                            </div>
+
+                            <h3 class="text-xl sm:text-2xl font-bold text-[#2b2b2b] mb-2 font-brand">
+                                SUSTI® Assessment Completo
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+                                La valutazione diagnostica approfondita che fotografa il livello di sostenibilità del tuo hotel, genera il Rating ufficiale (0–100) e ti confronta direttamente con oltre 1.000 hotel monitorati dal 2022.
+                            </p>
+
+                            <div class="space-y-2.5 pt-2 border-t border-emerald-100 mb-6 text-xs text-slate-700">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-[#007f3d] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">📊</div>
+                                    <span><strong>Mappatura a 3 dimensioni:</strong> 50 domande su dimensione Ambientale (4 temi), Sociale (3 temi) ed Economica (3 temi).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-[#007f3d] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">📈</div>
+                                    <span><strong>Benchmark su oltre 1.000 hotel:</strong> scopri come si colloca la tua struttura rispetto alla media nazionale di settore.</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-[#007f3d] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">📑</div>
+                                    <span><strong>Report sintetico operativo:</strong> piano d'azione prioritario per reparto e preparazione a certificazioni di terza parte.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100">
+                            <a href="https://app.susti.it/assessment" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#007f3d] hover:bg-[#00522b] shadow transition active:scale-98">
+                                <span>Accedi all'Assessment Completo</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <div class="text-[10.5px] text-center text-slate-400 font-mono mt-2">Accesso piattaforma su app.susti.it/assessment</div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </section>
 
@@ -928,11 +1070,14 @@
                     Scopri come fotografare il livello del tuo hotel e rispondere alle continue richieste di mercato con dati oggettivi, misurabili e conformi agli standard internazionali.
                 </p>
                 <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <a href="mailto:info@territorisostenibili.it?subject=Richiesta%20Informazioni%20SUSTI%20Hotel" class="inline-flex items-center justify-center px-7 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition active:scale-95">
-                        Richiedi informazioni →
+                    <a href="https://app.susti.it/greenwashing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#00522b] bg-[#94c11f] hover:bg-[#c6d86b] shadow-lg transition active:scale-95">
+                        Smart Check (3 min) →
                     </a>
-                    <a href="#faq" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition">
-                        Consulta le FAQ
+                    <a href="https://app.susti.it/assessment" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#007f3d] hover:bg-[#00522b] border border-emerald-500 transition active:scale-95">
+                        Assessment Hotel →
+                    </a>
+                    <a href="mailto:info@territorisostenibili.it?subject=Richiesta%20Informazioni%20SUSTI%20Hotel" class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur transition">
+                        Contattaci
                     </a>
                 </div>
             </div>
@@ -981,6 +1126,10 @@
             <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 pt-2 border-t border-slate-100">
                 <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                     <span>SUSTI® – Sustainable Tourism Index</span>
+                    <span>·</span>
+                    <a href="https://app.susti.it/greenwashing" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:text-[#007f3d] underline">Smart Check</a>
+                    <span>·</span>
+                    <a href="https://app.susti.it/assessment" target="_blank" rel="noopener noreferrer" class="text-slate-600 hover:text-[#007f3d] underline">Assessment Hotel</a>
                     <span>·</span>
                     <a href="mailto:info@territorisostenibili.it" class="text-slate-600 hover:text-[#007f3d] underline">info@territorisostenibili.it</a>
                     <span>·</span>
